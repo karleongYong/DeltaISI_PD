@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Precisor Station</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA788.png" usemap="#EA788" border="0" />
+
+<MAP NAME="EA788">
+<area shape="rect" coords="915,693,1132,753" href="EA842.htm" target="_self">
+<area shape="rect" coords="131,942,251,981" href="EA823.htm" target="_self">
+<area shape="rect" coords="78,854,305,914" href="EA815.htm" target="_self">
+<area shape="rect" coords="23,785,373,828" href="EA825.htm" target="_self">
+<area shape="rect" coords="59,720,329,767" href="EA822.htm" target="_self">
+<area shape="rect" coords="66,334,287,380" href="EA816.htm" target="_self">
+<area shape="rect" coords="87,258,280,303" href="EA818.htm" target="_self">
+<area shape="rect" coords="465,161,832,218" href="EA844.htm" target="_self">
+<area shape="rect" coords="29,653,358,701" href="EA820.htm" target="_self">
+<area shape="rect" coords="18,572,362,628" href="EA824.htm" target="_self">
+<area shape="rect" coords="28,490,321,550" href="EA821.htm" target="_self">
+<area shape="rect" coords="75,405,280,463" href="EA817.htm" target="_self">
+<area shape="rect" coords="37,154,333,237" href="EA827.htm" target="_self">
+<area shape="rect" coords="52,79,307,127" href="EA826.htm" target="_self">
+<area shape="rect" coords="535,261,755,307" href="EA845.htm" target="_self">
+<area shape="rect" coords="458,329,975,389" href="EA848.htm" target="_self">
+<area shape="rect" coords="504,409,884,469" href="EA861.htm" target="_self">
+<area shape="rect" coords="524,507,769,555" href="EA853.htm" target="_self">
+<area shape="rect" coords="522,709,764,753" href="EA856.htm" target="_self">
+<area shape="rect" coords="535,576,748,619" href="EA854.htm" target="_self">
+<area shape="rect" coords="516,639,811,684" href="EA860.htm" target="_self">
+<area shape="rect" coords="515,775,779,821" href="EA858.htm" target="_self">
+<area shape="rect" coords="522,844,760,890" href="EA847.htm" target="_self">
+<area shape="rect" coords="535,990,767,1038" href="EA851.htm" target="_self">
+<area shape="rect" coords="538,1063,772,1109" href="EA859.htm" target="_self">
+<area shape="rect" coords="539,1147,775,1194" href="EA846.htm" target="_self">
+<area shape="rect" coords="554,1221,762,1283" href="EA849.htm" target="_self">
+<area shape="rect" coords="578,1313,742,1361" href="EA855.htm" target="_self">
+<area shape="rect" coords="536,1393,797,1443" href="EA857.htm" target="_self">
+<area shape="rect" coords="564,914,730,960" href="EA850.htm" target="_self">
+<area shape="rect" coords="444,138,1149,1463" href="EA865.htm" target="_self">
+<area shape="rect" coords="438,68,971,125" href="EA863.htm" target="_self">
+<area shape="rect" coords="410,10,1171,1494" href="EA811.htm" target="_self">
+<area shape="rect" coords="71,38,91,58" href="EA829.htm" target="_self">
+<area shape="rect" coords="10,22,379,1019" href="EA813.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Precisor Station : StateMachine diagram</div>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">13-Mar-15 12:07:58 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">25-May-16 4:33:41 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">ka_gan</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{19D0C062-4AD7-4c2b-A0FA-99565F78E1AB}</td>
+		</tr>
+	</table>
+	
+</div>
+ 
+</body>
+</html>

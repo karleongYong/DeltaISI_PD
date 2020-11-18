@@ -1,0 +1,17 @@
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Release\Seagate.AAS.Parsel.Device.RFID.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Release\Seagate.AAS.IO.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Release\Seagate.AAS.IO.Serial.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Release\Seagate.AAS.Parsel.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Release\Seagate.AAS.Parsel.Hw.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Release\Seagate.AAS.UI.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Release\Seagate.AAS.Utils.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Release\nunit.framework.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Release\ZedGraph.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Release\Seagate.AAS.Parsel.Device.RFID.csprojResolveAssemblyReference.cache
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Release\Seagate.AAS.Parsel.Device.RFID.Hga.BolaTagDataForm.resources
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Release\Seagate.AAS.Parsel.Device.RFID.Hga.BolaTagDataPanel.resources
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Release\Seagate.AAS.Parsel.Device.RFID.Hga.CommParamForm.resources
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Release\Seagate.AAS.Parsel.Device.RFID.Hga.FolaTagDataForm.resources
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Release\Seagate.AAS.Parsel.Device.RFID.Hga.FolaTagDataPanel.resources
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Release\Seagate.AAS.Parsel.Device.RFID.csproj.GenerateResource.Cache
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Release\Seagate.AAS.Parsel.Device.RFID.dll

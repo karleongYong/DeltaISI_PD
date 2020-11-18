@@ -1,0 +1,87 @@
+C:\AAS_SDK\Frameworks\parsel4\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.Parsel.Device.RFID.dll
+C:\AAS_SDK\Frameworks\parsel4\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.Parsel.Device.RFID.pdb
+C:\AAS_SDK\Frameworks\parsel4\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.IO.dll
+C:\AAS_SDK\Frameworks\parsel4\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.IO.Serial.dll
+C:\AAS_SDK\Frameworks\parsel4\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.Parsel.dll
+C:\AAS_SDK\Frameworks\parsel4\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.Parsel.Hw.dll
+C:\AAS_SDK\Frameworks\parsel4\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.UI.dll
+C:\AAS_SDK\Frameworks\parsel4\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.Utils.dll
+C:\AAS_SDK\Frameworks\parsel4\Seagate.AAS.Parsel.Device.RFID\bin\Debug\nunit.framework.dll
+C:\AAS_SDK\Frameworks\parsel4\Seagate.AAS.Parsel.Device.RFID\bin\Debug\ZedGraph.dll
+C:\AAS_SDK\Frameworks\parsel4\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.BolaTagDataForm.resources
+C:\AAS_SDK\Frameworks\parsel4\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.BolaTagDataPanel.resources
+C:\AAS_SDK\Frameworks\parsel4\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.CommParamForm.resources
+C:\AAS_SDK\Frameworks\parsel4\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.FolaTagDataForm.resources
+C:\AAS_SDK\Frameworks\parsel4\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.FolaTagDataPanel.resources
+C:\AAS_SDK\Frameworks\parsel4\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.csproj.GenerateResource.Cache
+C:\AAS_SDK\Frameworks\parsel4\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.dll
+C:\AAS_SDK\Frameworks\parsel4\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.pdb
+C:\AAS_SDK\Frameworks\parsel4\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.csprojResolveAssemblyReference.cache
+C:\AAS_SDK\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.dll
+C:\AAS_SDK\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.pdb
+C:\AAS_SDK\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.Parsel.Device.RFID.dll
+C:\AAS_SDK\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.Parsel.Device.RFID.pdb
+C:\AAS_SDK\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.IO.dll
+C:\AAS_SDK\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.IO.Serial.dll
+C:\AAS_SDK\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.Parsel.dll
+C:\AAS_SDK\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.Parsel.Hw.dll
+C:\AAS_SDK\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.UI.dll
+C:\AAS_SDK\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.Utils.dll
+C:\AAS_SDK\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Debug\nunit.framework.dll
+C:\AAS_SDK\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Debug\ZedGraph.dll
+C:\AAS_SDK\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.BolaTagDataForm.resources
+C:\AAS_SDK\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.BolaTagDataPanel.resources
+C:\AAS_SDK\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.CommParamForm.resources
+C:\AAS_SDK\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.FolaTagDataForm.resources
+C:\AAS_SDK\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.FolaTagDataPanel.resources
+C:\AAS_SDK\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.csproj.GenerateResource.Cache
+C:\AAS_SDK\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.csprojResolveAssemblyReference.cache
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID-original\bin\Debug\Seagate.AAS.Parsel.Device.RFID.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID-original\bin\Debug\Seagate.AAS.Parsel.Device.RFID.pdb
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID-original\bin\Debug\Seagate.AAS.IO.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID-original\bin\Debug\Seagate.AAS.IO.Serial.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID-original\bin\Debug\Seagate.AAS.Parsel.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID-original\bin\Debug\Seagate.AAS.Parsel.Hw.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID-original\bin\Debug\Seagate.AAS.UI.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID-original\bin\Debug\Seagate.AAS.Utils.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID-original\bin\Debug\nunit.framework.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID-original\bin\Debug\ZedGraph.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID-original\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.BolaTagDataForm.resources
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID-original\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.BolaTagDataPanel.resources
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID-original\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.CommParamForm.resources
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID-original\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.FolaTagDataForm.resources
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID-original\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.FolaTagDataPanel.resources
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID-original\obj\Debug\Seagate.AAS.Parsel.Device.RFID.csproj.GenerateResource.Cache
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID-original\obj\Debug\Seagate.AAS.Parsel.Device.RFID.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID-original\obj\Debug\Seagate.AAS.Parsel.Device.RFID.pdb
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.Parsel.Device.RFID.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.Parsel.Device.RFID.pdb
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.IO.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.IO.Serial.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.Parsel.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.Parsel.Hw.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.UI.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.Utils.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Debug\nunit.framework.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\bin\Debug\ZedGraph.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.BolaTagDataForm.resources
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.BolaTagDataPanel.resources
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.CommParamForm.resources
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.FolaTagDataForm.resources
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.FolaTagDataPanel.resources
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.csproj.GenerateResource.Cache
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.dll
+C:\AAS_SDK\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.pdb
+C:\AAS_SDK\Projects\HGA\Delta_ISI_ANC_WITH_PD\HGA.HST\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.Parsel.Device.RFID.dll
+C:\AAS_SDK\Projects\HGA\Delta_ISI_ANC_WITH_PD\HGA.HST\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.Parsel.Device.RFID.pdb
+C:\AAS_SDK\Projects\HGA\Delta_ISI_ANC_WITH_PD\HGA.HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.csprojAssemblyReference.cache
+C:\AAS_SDK\Projects\HGA\Delta_ISI_ANC_WITH_PD\HGA.HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.BolaTagDataForm.resources
+C:\AAS_SDK\Projects\HGA\Delta_ISI_ANC_WITH_PD\HGA.HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.BolaTagDataPanel.resources
+C:\AAS_SDK\Projects\HGA\Delta_ISI_ANC_WITH_PD\HGA.HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.CommParamForm.resources
+C:\AAS_SDK\Projects\HGA\Delta_ISI_ANC_WITH_PD\HGA.HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.FolaTagDataForm.resources
+C:\AAS_SDK\Projects\HGA\Delta_ISI_ANC_WITH_PD\HGA.HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.Hga.FolaTagDataPanel.resources
+C:\AAS_SDK\Projects\HGA\Delta_ISI_ANC_WITH_PD\HGA.HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.csproj.GenerateResource.cache
+C:\AAS_SDK\Projects\HGA\Delta_ISI_ANC_WITH_PD\HGA.HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.csproj.CoreCompileInputs.cache
+C:\AAS_SDK\Projects\HGA\Delta_ISI_ANC_WITH_PD\HGA.HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.csproj.CopyComplete
+C:\AAS_SDK\Projects\HGA\Delta_ISI_ANC_WITH_PD\HGA.HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.dll
+C:\AAS_SDK\Projects\HGA\Delta_ISI_ANC_WITH_PD\HGA.HST\Seagate.AAS.Parsel.Device.RFID\obj\Debug\Seagate.AAS.Parsel.Device.RFID.pdb

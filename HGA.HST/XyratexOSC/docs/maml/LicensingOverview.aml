@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="ee68455c-3d07-436a-9447-e33f98d0b5d9" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+      The licensing library is used for verifying that a XyratexOSC UltraPro USB-Key is plugged into
+      the machine.
+      </para>
+    </introduction>
+    <section address="LicenseLock">
+      <title>The License Lock</title>
+      <content>
+        <para>
+        The license lock verifies the existance of a valid USB-key dongle in a machine. Verification
+        occurs during LicenceLock instantiation or through Verify operations. This verification
+        can be called on application initialization, periodically, or at significant events in
+        the application execution.
+        </para>
+      </content>
+    </section>
+    <relatedTopics>
+      <codeEntityReference>N:XyratexOSC.Licensing</codeEntityReference>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

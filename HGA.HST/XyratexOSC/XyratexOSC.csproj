@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C11DA827-217A-458A-A446-87B6502B3AD4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XyratexOSC</RootNamespace>
+    <AssemblyName>XyratexOSC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Xyratex.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>KeyFile\xyratex.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DocumentationFile>bin\Debug\XyratexOSC.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>bin\Release\XyratexOSC.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FbAwGEM64">
+      <HintPath>Lib\FbAwGEM64.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Factory\AlarmCode.cs" />
+    <Compile Include="Factory\CommuncationException.cs" />
+    <Compile Include="Factory\ContinuumProvider.cs" />
+    <Compile Include="Factory\ControlEventArgs.cs" />
+    <Compile Include="Factory\DataVariable.cs" />
+    <Compile Include="Factory\ECVariable.cs" />
+    <Compile Include="Factory\EquipmentPort.cs" />
+    <Compile Include="Factory\GemAlarm.cs" />
+    <Compile Include="Factory\GemEvent.cs" />
+    <Compile Include="Factory\GemEventId.cs" />
+    <Compile Include="Factory\GemReport.cs" />
+    <Compile Include="Factory\GemVariable.cs" />
+    <Compile Include="Factory\GemVariableEventArgs.cs" />
+    <Compile Include="Factory\GemVariableId.cs" />
+    <Compile Include="Factory\HostState.cs" />
+    <Compile Include="Factory\ICommProvider.cs" />
+    <Compile Include="Factory\IGemItem.cs" />
+    <Compile Include="Factory\ISecsValue.cs" />
+    <Compile Include="Factory\MessageEventArgs.cs" />
+    <Compile Include="Factory\ProcessRunEventArgs.cs" />
+    <Compile Include="Factory\RecipeEventArgs.cs" />
+    <Compile Include="Factory\SecsASCII.cs" />
+    <Compile Include="Factory\SecsASCIIChar.cs" />
+    <Compile Include="Factory\SecsBool.cs" />
+    <Compile Include="Factory\SecsInt16.cs" />
+    <Compile Include="Factory\SecsInt32.cs" />
+    <Compile Include="Factory\SecsInt64.cs" />
+    <Compile Include="Factory\SecsInt8.cs" />
+    <Compile Include="Factory\SecsList.cs" />
+    <Compile Include="Factory\SecsString.cs" />
+    <Compile Include="Factory\SecsUInt16.cs" />
+    <Compile Include="Factory\SecsUInt32.cs" />
+    <Compile Include="Factory\SecsUInt64.cs" />
+    <Compile Include="Factory\SecsUInt8.cs" />
+    <Compile Include="Factory\StatusVariable.cs" />
+    <Compile Include="Factory\ToolState.cs" />
+    <Compile Include="Factory\XmlProvider.cs" />
+    <Compile Include="Hardware\DeviceException.cs" />
+    <Compile Include="Hardware\DeviceManager.cs" />
+    <Compile Include="Hardware\DeviceNameAttribute.cs" />
+    <Compile Include="Hardware\DevicePortName.cs" />
+    <Compile Include="Hardware\DevicePortNumber.cs" />
+    <Compile Include="Hardware\DevicePortTcp.cs" />
+    <Compile Include="Hardware\IDevice.cs" />
+    <Compile Include="Hardware\IDevicePort.cs" />
+    <Compile Include="Hardware\HardwareComponent.cs" />
+    <Compile Include="Hardware\IPart.cs" />
+    <Compile Include="INamed.cs" />
+    <Compile Include="INamedList.cs" />
+    <Compile Include="IO\AIOBit.cs" />
+    <Compile Include="IO\Devices\IIODevice.cs" />
+    <Compile Include="IO\Devices\Moxa1200.cs" />
+    <Compile Include="IO\Devices\Moxa1200Config.cs" />
+    <Compile Include="IO\Devices\MXIO.cs" />
+    <Compile Include="IO\Devices\SimIO.cs" />
+    <Compile Include="IO\DIOBit.cs" />
+    <Compile Include="IO\DIOBitExtensions.cs" />
+    <Compile Include="IO\DIOWord.cs" />
+    <Compile Include="IO\IIOPart.cs" />
+    <Compile Include="IO\IOComponent.cs" />
+    <Compile Include="IO\IOException.cs" />
+    <Compile Include="IO\LightStackColor.cs" />
+    <Compile Include="IO\LightTower.cs" />
+    <Compile Include="IO\UI\IOPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IO\UI\IOPanel.Designer.cs">
+      <DependentUpon>IOPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation.cs" />
+    <Compile Include="OperationEventArgs.cs" />
+    <Compile Include="NamedList.cs" />
+    <Compile Include="NamedConverter.cs" />
+    <Compile Include="Settings\OperationModeEventArgs.cs" />
+    <Compile Include="UI\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DataConverter.cs" />
+    <Compile Include="UI\IPAddressTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\IPAddressTextBox.Designer.cs">
+      <DependentUpon>IPAddressTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LEDButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\LEDButton.Designer.cs">
+      <DependentUpon>LEDButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LEDColor.cs" />
+    <Compile Include="UI\LEDIndicator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\LEDIndicator.Designer.cs">
+      <DependentUpon>LEDIndicator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\YesNoConverter.cs" />
+    <Compile Include="Utilities\BufferedValue.cs" />
+    <Compile Include="Utilities\EventExtensions.cs" />
+    <Compile Include="XMath\Int128.cs" />
+    <Compile Include="XMath\IntPoint2D.cs" />
+    <Compile Include="XMath\IntRegion2D.cs" />
+    <Compile Include="XMath\Line2D.cs" />
+    <Compile Include="XMath\LineSeg2D.cs" />
+    <Compile Include="XMath\LoessInterpolator.cs" />
+    <Compile Include="XMath\MathExtensions.cs" />
+    <Compile Include="XMath\Matrix.cs" />
+    <Compile Include="XMath\Point2D.cs" />
+    <Compile Include="XMath\Point3D.cs" />
+    <Compile Include="XMath\Polygon.cs" />
+    <Compile Include="XMath\PolygonMath.cs" />
+    <Compile Include="XMath\Region2D.cs" />
+    <Compile Include="XMath\Size2D.cs" />
+    <Compile Include="XMath\Size3D.cs" />
+    <Compile Include="GlobalHook\BaseHookListener.cs" />
+    <Compile Include="GlobalHook\Controls\HookType.cs" />
+    <Compile Include="GlobalHook\Controls\MouseKeyEventProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GlobalHook\HotKeys\HotKeyArgs.cs" />
+    <Compile Include="GlobalHook\HotKeys\HotKeySet.cs" />
+    <Compile Include="GlobalHook\HotKeys\HotKeySetCollection.cs" />
+    <Compile Include="GlobalHook\HotKeys\HotKeySetsListener.cs" />
+    <Compile Include="GlobalHook\KeyboardHookListener.cs" />
+    <Compile Include="GlobalHook\KeyboardState.cs" />
+    <Compile Include="GlobalHook\KeyEventArgsExt.cs" />
+    <Compile Include="GlobalHook\KeyPressEventArgsExt.cs" />
+    <Compile Include="GlobalHook\MouseEventExtArgs.cs" />
+    <Compile Include="GlobalHook\MouseHookListener.cs" />
+    <Compile Include="GlobalHook\WinApi\AppHooker.cs" />
+    <Compile Include="GlobalHook\WinApi\GlobalHooker.cs" />
+    <Compile Include="GlobalHook\WinApi\HookCallback.cs" />
+    <Compile Include="GlobalHook\WinApi\Hooker.cs" />
+    <Compile Include="GlobalHook\WinApi\HookNativeMethods.cs" />
+    <Compile Include="GlobalHook\WinApi\KeyboardHookStruct.cs" />
+    <Compile Include="GlobalHook\WinApi\KeyboardNativeMethods.cs" />
+    <Compile Include="GlobalHook\WinApi\Messages.cs" />
+    <Compile Include="GlobalHook\WinApi\MouseNativeMethods.cs" />
+    <Compile Include="GlobalHook\WinApi\MouseStructures.cs" />
+    <Compile Include="GlobalHook\WinApi\Point.cs" />
+    <Compile Include="GlobalHook\WinApi\ThreadNativeMethods.cs" />
+    <Compile Include="Licensing\LicenseStatus.cs" />
+    <Compile Include="Licensing\LicensingException.cs" />
+    <Compile Include="Licensing\LicenseLock.cs" />
+    <Compile Include="Licensing\Ultrapro.cs" />
+    <Compile Include="Licensing\UltraProNativeApi.cs" />
+    <Compile Include="Logging\DailyTextWriterListener.cs" />
+    <Compile Include="Logging\Log.cs" />
+    <Compile Include="Logging\RollingListBoxListener.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\ISettings.cs" />
+    <Compile Include="Settings\SettingsAttribute.cs" />
+    <Compile Include="Settings\SettingsConverter.cs" />
+    <Compile Include="Settings\SettingsDocument.cs" />
+    <Compile Include="Settings\SettingsFileOption.cs" />
+    <Compile Include="Settings\SettingsNode.cs" />
+    <Compile Include="Settings\SettingsNodeList.cs" />
+    <Compile Include="Settings\UI\PropertyGridEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\UI\PropertyGridEditor.designer.cs">
+      <DependentUpon>PropertyGridEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\UI\SettingsEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\UI\SettingsEditForm.Designer.cs">
+      <DependentUpon>SettingsEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\UI\SettingsEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\UI\TreeViewEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DoubleBufferedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\ErrorBanner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ListPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ListPanel.Designer.cs">
+      <DependentUpon>ListPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ListPanelItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ListPanelItem.Designer.cs">
+      <DependentUpon>ListPanelItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NotificationPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\NotificationPanel.Designer.cs">
+      <DependentUpon>NotificationPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Notify.cs" />
+    <Compile Include="UI\NotifyBanner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\NotifyBanner.Designer.cs">
+      <DependentUpon>NotifyBanner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NotifyBannerEventArgs.cs" />
+    <Compile Include="UI\NotifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NotifyForm.Designer.cs">
+      <DependentUpon>NotifyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PopUpContextForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PopUpContextForm.Designer.cs">
+      <DependentUpon>PopUpContextForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProgressBarEnhanced.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\UIUtility.cs" />
+    <Compile Include="UI\WizardBanner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\WizardStep.cs" />
+    <Compile Include="Utilities\AlphaNumericComparer.cs" />
+    <Compile Include="Utilities\EnumExtensions.cs" />
+    <Compile Include="Utilities\ImageHeader.cs" />
+    <Compile Include="Utilities\RollingBuffer.cs" />
+    <Compile Include="Utilities\CreatableElement.cs" />
+    <Compile Include="Utilities\Factory.cs" />
+    <Compile Include="Utilities\NewableElement.cs" />
+    <Compile Include="Utilities\IFactory.cs" />
+    <Compile Include="Utilities\IFactoryElement.cs" />
+    <Compile Include="Utilities\StringExtensions.cs" />
+    <Compile Include="Utilities\TimedLock.cs" />
+    <Compile Include="XMath\Statistics.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KeyFile\xyratex.snk" />
+    <None Include="Licensing\LicensingDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XyratexAppLogo.png" />
+    <None Include="Resources\SettingsIcon.png" />
+    <None Include="Resources\MoveIcon.png" />
+    <None Include="Resources\RemoveIcon.png" />
+    <None Include="Resources\AddIcon.png" />
+    <None Include="Resources\Move.png" />
+    <Content Include="GlobalHook\HotKeys\ReadMe.txt" />
+    <EmbeddedResource Include="IO\UI\IOPanel.resx">
+      <DependentUpon>IOPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ux32w_32.dll" />
+    <EmbeddedResource Include="Resources\ux32w_64.dll" />
+    <Content Include="Resources\LEDBTN_Blue_dn.png" />
+    <Content Include="Resources\LEDBTN_Blue_ov.png" />
+    <Content Include="Resources\LEDBTN_Blue_ro.png" />
+    <Content Include="Resources\LEDBTN_Blue_up.png" />
+    <Content Include="Resources\LEDBTN_Green_dn.png" />
+    <Content Include="Resources\LEDBTN_Green_ov.png" />
+    <Content Include="Resources\LEDBTN_Green_ro.png" />
+    <Content Include="Resources\LEDBTN_Green_up.png" />
+    <Content Include="Resources\LEDBTN_Grey_dn.png" />
+    <Content Include="Resources\LEDBTN_Grey_ov.png" />
+    <Content Include="Resources\LEDBTN_Grey_ro.png" />
+    <Content Include="Resources\LEDBTN_Grey_up.png" />
+    <Content Include="Resources\LEDBTN_Orange_dn.png" />
+    <Content Include="Resources\LEDBTN_Orange_ov.png" />
+    <Content Include="Resources\LEDBTN_Orange_ro.png" />
+    <Content Include="Resources\LEDBTN_Orange_up.png" />
+    <Content Include="Resources\LEDBTN_Red_dn.png" />
+    <Content Include="Resources\LEDBTN_Red_ov.png" />
+    <Content Include="Resources\LEDBTN_Red_ro.png" />
+    <Content Include="Resources\LEDBTN_Red_up.png" />
+    <Content Include="Resources\LEDBTN_Yellow_dn.png" />
+    <Content Include="Resources\LEDBTN_Yellow_ov.png" />
+    <Content Include="Resources\LEDBTN_Yellow_ro.png" />
+    <Content Include="Resources\LEDBTN_Yellow_up.png" />
+    <Content Include="Resources\LED_Blue_On.png" />
+    <Content Include="Resources\LED_Green_On.png" />
+    <Content Include="Resources\LED_Off.png" />
+    <Content Include="Resources\LED_Orange_On.png" />
+    <Content Include="Resources\LED_Red_On.png" />
+    <Content Include="Resources\LED_Yellow_On.png" />
+    <None Include="Resources\MXIO_NET_32.dll" />
+    <None Include="Resources\MXIO_NET_64.dll" />
+    <Content Include="Resources\Xyratex.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\UI\PropertyGridEditor.resx">
+      <DependentUpon>PropertyGridEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\UI\SettingsEditForm.resx">
+      <DependentUpon>SettingsEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\UI\SettingsEditor.resx">
+      <DependentUpon>SettingsEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\UI\TreeViewEditor.resx">
+      <DependentUpon>TreeViewEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ErrorBanner.resx">
+      <DependentUpon>ErrorBanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\IPAddressTextBox.resx">
+      <DependentUpon>IPAddressTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LEDButton.resx">
+      <DependentUpon>LEDButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LEDIndicator.resx">
+      <DependentUpon>LEDIndicator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ListPanel.resx">
+      <DependentUpon>ListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ListPanelItem.resx">
+      <DependentUpon>ListPanelItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NotificationPanel.resx">
+      <DependentUpon>NotificationPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NotifyBanner.resx">
+      <DependentUpon>NotifyBanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NotifyForm.resx">
+      <DependentUpon>NotifyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PopUpContextForm.resx">
+      <DependentUpon>PopUpContextForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WizardBanner.resx">
+      <DependentUpon>WizardBanner.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

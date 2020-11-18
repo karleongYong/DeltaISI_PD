@@ -1,0 +1,116 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Seagate.AAS.Parsel.Device.RFID
+{
+    [Serializable]
+    public abstract class RFIDTagData
+    {
+        public readonly int IDByteNo;
+        public readonly int CheckSumByteNo;
+
+        protected byte _checkSumCalculate = 0;
+               
+        public RFIDTagData(int checkSumByteNo, int idByteNo)
+        {
+            this.CheckSumByteNo = checkSumByteNo;
+            this.IDByteNo = idByteNo;
+        }
+
+        public void DecodeReadData(string readData, bool isChksum)
+        {
+            if (readData.Length >= 257 && readData[0] == 'R' && readData[1] == 'D')
+            {
+                DecodeErrorCode(readData.Substring(2, 2));
+                string rfidData = readData.Substring(4);
+                ExtractReadData(rfidData);
+                if(isChksum)
+                    VerifyCheckSum(rfidData);
+            }
+            else throw ExceptionRFID.Create(ErrorCodeRFID.INVALID_DATA);
+        }
+
+        public string DecodeID(string readData)
+        {
+            if (readData.Length == 7 && readData[0] == 'R' && readData[1] == 'D')
+            {
+                DecodeErrorCode(readData.Substring(2, 2));
+                return readData.Substring(4).Trim();
+            }
+            else throw ExceptionRFID.Create(ErrorCodeRFID.INVALID_DATA);
+        }
+
+        public void DecodeWriteResponse(string writeResponse)
+        {
+            if (writeResponse.Length == 4 && writeResponse[0] == 'W' && writeResponse[1] == 'T')
+                DecodeErrorCode(writeResponse.Substring(2, 2));
+            else throw ExceptionRFID.Create(ErrorCodeRFID.INVALID_DATA);
+        }
+
+        public byte DecodeCheckSum(string readData)
+        {
+            if (readData.Length == 5 && readData[0] == 'R' && readData[1] == 'D')
+            {
+                DecodeErrorCode(readData.Substring(2, 2));
+                return (byte) readData[4];
+            }
+            else throw ExceptionRFID.Create(ErrorCodeRFID.INVALID_DATA);
+        }
+
+        public void CheckID(string id)
+        {
+            if (!IsCorrectID(id))
+                throw ExceptionRFID.Create(ErrorCodeRFID.INVALID_ID);
+        }
+
+        public abstract void ExtractReadData(string rfidData);
+
+        public abstract string GetWriteString(out List<int> ascii13ByteNoList);
+
+        public abstract bool IsCorrectID(string id);
+
+        private void DecodeErrorCode(string errorCodeString)
+        {
+            try
+            {
+                int errorCode = int.Parse(errorCodeString, System.Globalization.NumberStyles.HexNumber);
+                if (errorCode != 0)
+                    throw ExceptionRFID.Create((ErrorCodeRFID) errorCode);
+            }
+            catch
+            {
+                throw ExceptionRFID.Create(ErrorCodeRFID.INVALID_DATA);
+            }
+        }
+
+        private void VerifyCheckSum(string rfidData)
+        {
+            _checkSumCalculate = CalculateCheckSum(rfidData);
+            if (_checkSumCalculate != (byte) rfidData[CheckSumByteNo])
+                throw ExceptionRFID.Create(ErrorCodeRFID.CHECKSUM_ERR);
+        }
+
+        protected byte CalculateCheckSum(string rfidData)
+        {
+            char[] rfidDataChar = rfidData.ToCharArray();
+            int calCS = 0;
+            for (int i = 0; i < rfidDataChar.Length; i++)
+            {
+                if (i != CheckSumByteNo)
+                    calCS += rfidDataChar[i];
+            }
+            return (byte)(calCS % 256);
+        }
+
+        protected string TrimWriteString(string data, int length)
+        {
+            if (data.Length == length)
+                return data;
+            else if (data.Length < length)
+                return data.PadRight(length, ' ');
+            else // data.Length > length
+                return data.Substring(0, length);
+        }
+    }
+}

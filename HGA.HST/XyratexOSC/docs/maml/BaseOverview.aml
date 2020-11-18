@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="d2064fce-1054-409c-a25e-ea7503453e13" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+      The base library consists of three sub-libraries, as follows:
+      </para>
+    </introduction>
+    <section address="Logging">
+      <title>Logging Library</title>
+      <content>
+        <para>The logging library provides logging capabilities to the motion component, 
+        vision component, lighting component, and the main application. Through shared
+        loggers, all components can log to the same output. Logging can be output to
+        rich text boxes, a console-style window, files, and daily-rolling files.
+        </para>
+      </content>
+      <link xlink:href="0a76fb82-b171-44b4-86f2-b47f36c896d9">Go to Logging</link>
+    </section>
+    <section address="Licensing">
+      <title>Licensing Library</title>
+      <content>
+        <para>The licensing library provides the interface to the Sentinel UltraPro
+        USB key. This library is used to verify that a valid USB license is plugged 
+        into the machine.</para>
+      </content>
+      <link xlink:href="ee68455c-3d07-436a-9447-e33f98d0b5d9">Go to Licensing</link>
+    </section>
+    <section address="Settings">
+      <title>Settings Library</title>
+      <content>
+        <para>The settings library provides the framework for processing tabbed settings documents.
+        A settings document is a text-based document consisting of tabbed lines, where the tab-depth
+        creates the tree shape (similar to XML). Nodes that have no siblings and no children are 
+        considered 'value' nodes. Value nodes are used to define settings, configuration, etc.</para>
+      </content>
+      <link xlink:href="7cd5b2e1-4e35-4074-ae88-20581b047a9f">Go to Settings Documents</link>
+    </section>
+  </developerConceptualDocument>
+</topic>

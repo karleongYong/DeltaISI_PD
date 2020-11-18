@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C30A28E9-B4A3-443F-90C4-15E86B2E546F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Seagate.AAS.Parsel.Hw</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Seagate.AAS.Parsel.Hw</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Seagate.AAS.Utils">
+      <HintPath>..\..\..\..\Frameworks\parsel4\Seagate.AAS.Utils\bin\Debug\Seagate.AAS.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CameraImageGraphics.cs" />
+    <Compile Include="CameraSetting.cs" />
+    <Compile Include="IVisionLight.cs" />
+    <Compile Include="MoveProfile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exceptions\HardwareException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exceptions\IOException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exceptions\MotionException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exceptions\VisionException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HwSystem.cs" />
+    <Compile Include="IAnalogInput.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IAnalogOutput.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IAxis.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IAxisGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ICamera.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IConveyorSection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IConveyorStepper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IConveyorZone.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IDigitalInput.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IDigitalOutput.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IHardwareComponent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMoveProfile.cs" />
+    <Compile Include="IOManifest.cs" />
+    <Compile Include="IProviderAnalogInput.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IProviderAnalogOutput.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IProviderAxis.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IProviderCamera.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IProviderDigitalInput.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IProviderDigitalOutput.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ICameraStrobe.cs" />
+    <Compile Include="UI\PanelAnalogOutput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PanelAnalogOutput.Designer.cs">
+      <DependentUpon>PanelAnalogOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PanelAxis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PanelAxisControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PanelIO.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PanelIOMaifest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PanelIOMaifestTouchscreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PanelPointTeach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PanelSimpleAxis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnalogIn.bmp" />
+    <None Include="Resources\Axis.bmp" />
+    <None Include="Resources\AmpNode.bmp" />
+    <None Include="Resources\DigitalInput.bmp" />
+    <None Include="Resources\DigitalOutput.bmp" />
+    <None Include="Resources\IONode.bmp" />
+    <None Include="Resources\Off.bmp" />
+    <None Include="Resources\On.bmp" />
+    <None Include="Resources\Unknown.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UI\PanelAnalogOutput.resx">
+      <DependentUpon>PanelAnalogOutput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PanelAxisControl.resx">
+      <DependentUpon>PanelAxisControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PanelIOMaifest.resx">
+      <DependentUpon>PanelIOMaifest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PanelIOMaifestTouchscreen.resx">
+      <DependentUpon>PanelIOMaifestTouchscreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Seagate.AAS.UI\Seagate.AAS.UI\Seagate.AAS.UI.csproj">
+      <Project>{e5abc81e-7044-450a-8be7-6415db928271}</Project>
+      <Name>Seagate.AAS.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>call $(ProjectDir)..\Build\Scripts\verstamp.bat $(ProjectDir)
+</PreBuildEvent>
+    <PostBuildEvent>if $(ConfigurationName)==Release (copy $(TargetPath) $(ProjectDir)..\Assemblies)</PostBuildEvent>
+  </PropertyGroup>
+</Project>

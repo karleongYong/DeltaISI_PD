@@ -1,0 +1,5 @@
+tocTab[tocTab.length] = new Array("0.1.1.1.2.1.1.1:1", "", "UI", "EARoot/EA1/EA1/EA1/EA2/EA1/EA1/EA1/EA450.htm", "3.png", "88", "0", "", "Logical diagram0","{6FDBF71D-FEF5-4378-AACC-DE09509629DD}");
+tocTab[tocTab.length] = new Array("0.1.1.1.2.1.1.1:2", "", "UserLoginControl", "EARoot/EA1/EA1/EA1/EA2/EA1/EA1/EA1/EA453.htm", "5.png", "E1520", "0", "", "Class0","{89946275-598F-4aad-8CB0-B9151D4D99E0}");
+tocTab[tocTab.length] = new Array("0.1.1.1.2.1.1.1:3", "", "UserLoginControl", "EARoot/EA1/EA1/EA1/EA2/EA1/EA1/EA1/EA454.htm", "5.png", "E1519", "0", "", "Class0","{9B9F425E-AE6A-488b-BB2B-0F2FB13B14AA}");
+tocTab[tocTab.length] = new Array("0.1.1.1.2.1.1.1:4", "", "UserPasswordChangeForm", "EARoot/EA1/EA1/EA1/EA2/EA1/EA1/EA1/EA455.htm", "5.png", "E1521", "0", "", "Class0","{15F4D65A-F22A-4038-832C-D6A13B0116DD}");
+tocTab[tocTab.length] = new Array("0.1.1.1.2.1.1.1:5", "", "UserPasswordChangeForm", "EARoot/EA1/EA1/EA1/EA2/EA1/EA1/EA1/EA456.htm", "5.png", "E1522", "0", "", "Class0","{84C53E7B-9F64-4e9a-90AD-8E334C085D87}");

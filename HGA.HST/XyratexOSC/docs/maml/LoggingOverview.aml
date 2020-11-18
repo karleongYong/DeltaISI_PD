@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="0a76fb82-b171-44b4-86f2-b47f36c896d9" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+      The logging library provides basic logging functionality to the application and the library components. Logging
+      is performed through loggers, which hold a collection of appenders. Appenders determine the format and output of
+      messages received from the logger.
+      </para>
+    </introduction>
+    <section address="Loggers">
+      <title>Loggers</title>
+      <content>
+        <para>
+        A logger receives log messages, and passes the messages with the current timestamp into a collection of appenders.
+        Log messages can be specified by logging level: INFO, DEBUG, WARN, ERROR, FATAL; and by system type: 
+        MAIN, VISION, MOTION, LIGHTING. Loggers also have settings for creating MessageBox popups on error-level messages.
+        </para>
+        <para>
+        A simple scheme for handling logging is to create a logger for the application, and add/remove appenders depending
+        on settings/situations. Under this scheme a log message will always be sent to the logger, but if the logger has 
+        no appenders then no logging is performed. This way the application does not need to worry about where and what is
+        logged at the functional level.
+        </para>
+      </content>
+    </section>
+    <section address="Appenders">
+      <title>Appenders</title>
+      <content>
+        <para>
+        Appenders format messages received from a logger based on their 
+        <codeEntityReference>P:XyratexOSC.Logging.Appender.Format</codeEntityReference> property, and write the
+        formatted message to the appropriate output.
+        </para>
+        <para>Formatting a Message</para>
+        <para>Default value: "D{MM/dd/yy HH:mm:ss.ffff},T,M".</para>
+        <para>The format string defines the output of a single message line using a 
+        comma-separated list of message items. A single capital letter denotes the message 
+        item, which is (optionally) followed by an item specific formatting string. 
+        The message items are output in the order of the comma separated list.</para>
+        <para>The available items are as follows:</para>
+        <list class="bullet">
+          <listItem><para>"D": DateTime | {a DateTime format string}</para></listItem>
+          <listItem><para>"L": Level | {a comma-separated string of allowed Levels} (ex. "DEBUG,INFO,ERROR")</para></listItem>
+          <listItem><para>"C": Category | {a comma-separated string of allowed Categories} (ex. "VISION,MOTION")</para></listItem>
+          <listItem><para>"T": Thread | (no item options)</para></listItem>
+          <listItem><para>"M": Message | (no item options)</para></listItem>
+        </list>
+        <para>Appender Types</para>
+        <para>
+        By extending the appender class, custom appenders can be created for an application. However a few basic
+        appenders are already included in this library:
+        </para>
+      </content>
+      <sections>
+        <section address="Window">
+          <title>Window Appenders</title>
+          <content>
+            <para>
+            Window appenders output messages to RichTextBoxes. If no RichTextBox is assigned to this appender, it will default to a
+            separate 'console-style' form that simply holds a RichTextBox output. The appender is UI-thread safe, so logging to the
+            main form from this appender does not require worrying about control invoking from separate threads.
+            </para>
+            <para>
+            Leveraging some of the features of a richTextBox, the window appender can convert URL addresses to clickable links. The 
+            CustomLink property allows a developer to make any standard URL protocol fire a CustomLinkClick event. For example, you
+            could define 'file://' to fire an event that when clicked opens the file address in an application panel.
+            </para>
+          </content>
+        </section>
+        <section address="File">
+          <title>File Appenders</title>
+          <content>
+            <para>
+            File appenders output messages to a file. The file is opened for writing on the first message received, and the file is closed
+            when this appender is disposed.
+            </para>
+          </content>
+        </section>
+        <section address="RollingFile">
+          <title>Rolling File Appenders</title>
+          <content>
+            <para>
+            Rolling-file appenders output messages to a date-stamped file. At midnight, the current file is closed and outputting the messages
+            begins in a new file with the next-day date stamp.
+            </para>
+          </content>
+        </section>
+      </sections>
+    </section>
+    <relatedTopics>
+      <codeEntityReference>N:XyratexOSC.Logging</codeEntityReference>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

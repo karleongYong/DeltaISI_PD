@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Authentication">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mySeagateId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mySeagatePassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MachineType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthenticationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticationResult" type="tns:UserInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UserInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PLANT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMP_GID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMP_NAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMP_EMAIL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MGR_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MGR_NAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MGR_EMAIL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JOB_TITLE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DEPARTMENT" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EN_STATUS" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ACCESS_GRANT" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ROLE_GRANT" type="tns:ArrayOfInt" />
+          <s:element minOccurs="1" maxOccurs="1" name="UPDATE_DATE" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="LoginPass" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrDesc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Initialize">
+        <s:complexType />
+      </s:element>
+      <s:element name="InitializeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InitializeResult" type="tns:InitStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InitStatus">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IsCompleted" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrDesc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Authenticate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Server" type="tns:LdapServer" />
+            <s:element minOccurs="0" maxOccurs="1" name="mySeagateId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mySeagatePassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="LdapServer">
+        <s:restriction base="s:string">
+          <s:enumeration value="AMK" />
+          <s:enumeration value="OKC" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="AuthenticateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticateResult" type="tns:LoginInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LoginInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PLANT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMP_GID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMP_NAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMP_EMAIL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GLOBAL_GRADE" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="JOB_NAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SUP_GID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SUP_NAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HC_GRP" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ROLE_NO" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ROLE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UPDATE_DATE" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="LoginOK" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrDesc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CollectUserInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SoftwareAccessCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Server" type="tns:LdapServer" />
+            <s:element minOccurs="0" maxOccurs="1" name="mySeagateId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CollectUserInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CollectUserInfoResult" type="tns:LoginInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsUserExist">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mySeagateId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsUserExistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsUserExistResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchStaff">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SoftwareAccessCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SearchParam" type="tns:StaffSearchParam" />
+            <s:element minOccurs="0" maxOccurs="1" name="SearchPattern" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="StaffSearchParam">
+        <s:restriction base="s:string">
+          <s:enumeration value="EMP_ID" />
+          <s:enumeration value="EMP_NAME" />
+          <s:enumeration value="SUP_ID" />
+          <s:enumeration value="SUP_NAME" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="SearchStaffResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchStaffResult" type="tns:StaffInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StaffInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MyStaffInfo" type="tns:ArrayOfLoginInfo" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsCompleted" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrDesc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfLoginInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LoginInfo" nillable="true" type="tns:LoginInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CollectStaff">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SoftwareAccessCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CollectStaffResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CollectStaffResult" type="tns:StaffInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CollectRole">
+        <s:complexType />
+      </s:element>
+      <s:element name="CollectRoleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CollectRoleResult" type="tns:RoleInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RoleInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Text" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="tns:ArrayOfInt" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsCompleted" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrDesc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="WriteUserInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SoftwareAccessCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserInfo" type="tns:LoginInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WriteUserInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WriteUserInfoResult" type="tns:WriteStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WriteStatus">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IsCompleted" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrDesc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeleteUnavailableUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SoftwareAccessCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mySeagateId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUnavailableUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteUnavailableUserResult" type="tns:WriteStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserRole">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SoftwareAccessCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mySeagateId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Role" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserRoleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateUserRoleResult" type="tns:WriteStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckEmployeeAvailable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Server" type="tns:LdapServer" />
+            <s:element minOccurs="0" maxOccurs="1" name="mySeagateId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckEmployeeAvailableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckEmployeeAvailableResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CollectMachinePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MachineUsers" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CollectMachinePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CollectMachinePasswordResult" type="tns:MachinePassword" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MachinePassword">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="tns:ArrayOfString" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsCompleted" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrDesc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AuthenticationSoapIn">
+    <wsdl:part name="parameters" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticationSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="InitializeSoapIn">
+    <wsdl:part name="parameters" element="tns:Initialize" />
+  </wsdl:message>
+  <wsdl:message name="InitializeSoapOut">
+    <wsdl:part name="parameters" element="tns:InitializeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateSoapIn">
+    <wsdl:part name="parameters" element="tns:Authenticate" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="CollectUserInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:CollectUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="CollectUserInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:CollectUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsUserExistSoapIn">
+    <wsdl:part name="parameters" element="tns:IsUserExist" />
+  </wsdl:message>
+  <wsdl:message name="IsUserExistSoapOut">
+    <wsdl:part name="parameters" element="tns:IsUserExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchStaffSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchStaff" />
+  </wsdl:message>
+  <wsdl:message name="SearchStaffSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchStaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="CollectStaffSoapIn">
+    <wsdl:part name="parameters" element="tns:CollectStaff" />
+  </wsdl:message>
+  <wsdl:message name="CollectStaffSoapOut">
+    <wsdl:part name="parameters" element="tns:CollectStaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="CollectRoleSoapIn">
+    <wsdl:part name="parameters" element="tns:CollectRole" />
+  </wsdl:message>
+  <wsdl:message name="CollectRoleSoapOut">
+    <wsdl:part name="parameters" element="tns:CollectRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="WriteUserInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:WriteUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="WriteUserInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:WriteUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUnavailableUserSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteUnavailableUser" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUnavailableUserSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteUnavailableUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserRoleSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUserRole" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserRoleSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckEmployeeAvailableSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckEmployeeAvailable" />
+  </wsdl:message>
+  <wsdl:message name="CheckEmployeeAvailableSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckEmployeeAvailableResponse" />
+  </wsdl:message>
+  <wsdl:message name="CollectMachinePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:CollectMachinePassword" />
+  </wsdl:message>
+  <wsdl:message name="CollectMachinePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:CollectMachinePasswordResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="Authentication">
+      <wsdl:input message="tns:AuthenticationSoapIn" />
+      <wsdl:output message="tns:AuthenticationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Initialize">
+      <wsdl:input message="tns:InitializeSoapIn" />
+      <wsdl:output message="tns:InitializeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <wsdl:input message="tns:AuthenticateSoapIn" />
+      <wsdl:output message="tns:AuthenticateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CollectUserInfo">
+      <wsdl:input message="tns:CollectUserInfoSoapIn" />
+      <wsdl:output message="tns:CollectUserInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserExist">
+      <wsdl:input message="tns:IsUserExistSoapIn" />
+      <wsdl:output message="tns:IsUserExistSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchStaff">
+      <wsdl:input message="tns:SearchStaffSoapIn" />
+      <wsdl:output message="tns:SearchStaffSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CollectStaff">
+      <wsdl:input message="tns:CollectStaffSoapIn" />
+      <wsdl:output message="tns:CollectStaffSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CollectRole">
+      <wsdl:input message="tns:CollectRoleSoapIn" />
+      <wsdl:output message="tns:CollectRoleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteUserInfo">
+      <wsdl:input message="tns:WriteUserInfoSoapIn" />
+      <wsdl:output message="tns:WriteUserInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUnavailableUser">
+      <wsdl:input message="tns:DeleteUnavailableUserSoapIn" />
+      <wsdl:output message="tns:DeleteUnavailableUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserRole">
+      <wsdl:input message="tns:UpdateUserRoleSoapIn" />
+      <wsdl:output message="tns:UpdateUserRoleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckEmployeeAvailable">
+      <wsdl:input message="tns:CheckEmployeeAvailableSoapIn" />
+      <wsdl:output message="tns:CheckEmployeeAvailableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CollectMachinePassword">
+      <wsdl:input message="tns:CollectMachinePasswordSoapIn" />
+      <wsdl:output message="tns:CollectMachinePasswordSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Authentication">
+      <soap:operation soapAction="http://tempuri.org/Authentication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Initialize">
+      <soap:operation soapAction="http://tempuri.org/Initialize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <soap:operation soapAction="http://tempuri.org/Authenticate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollectUserInfo">
+      <soap:operation soapAction="http://tempuri.org/CollectUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserExist">
+      <soap:operation soapAction="http://tempuri.org/IsUserExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchStaff">
+      <soap:operation soapAction="http://tempuri.org/SearchStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollectStaff">
+      <soap:operation soapAction="http://tempuri.org/CollectStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollectRole">
+      <soap:operation soapAction="http://tempuri.org/CollectRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteUserInfo">
+      <soap:operation soapAction="http://tempuri.org/WriteUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUnavailableUser">
+      <soap:operation soapAction="http://tempuri.org/DeleteUnavailableUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserRole">
+      <soap:operation soapAction="http://tempuri.org/UpdateUserRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckEmployeeAvailable">
+      <soap:operation soapAction="http://tempuri.org/CheckEmployeeAvailable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollectMachinePassword">
+      <soap:operation soapAction="http://tempuri.org/CollectMachinePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Authentication">
+      <soap12:operation soapAction="http://tempuri.org/Authentication" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Initialize">
+      <soap12:operation soapAction="http://tempuri.org/Initialize" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <soap12:operation soapAction="http://tempuri.org/Authenticate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollectUserInfo">
+      <soap12:operation soapAction="http://tempuri.org/CollectUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserExist">
+      <soap12:operation soapAction="http://tempuri.org/IsUserExist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchStaff">
+      <soap12:operation soapAction="http://tempuri.org/SearchStaff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollectStaff">
+      <soap12:operation soapAction="http://tempuri.org/CollectStaff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollectRole">
+      <soap12:operation soapAction="http://tempuri.org/CollectRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteUserInfo">
+      <soap12:operation soapAction="http://tempuri.org/WriteUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUnavailableUser">
+      <soap12:operation soapAction="http://tempuri.org/DeleteUnavailableUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserRole">
+      <soap12:operation soapAction="http://tempuri.org/UpdateUserRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckEmployeeAvailable">
+      <soap12:operation soapAction="http://tempuri.org/CheckEmployeeAvailable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollectMachinePassword">
+      <soap12:operation soapAction="http://tempuri.org/CollectMachinePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://tep-meapps.ad.seagate.com/me_authen_service/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://tep-meapps.ad.seagate.com/me_authen_service/service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{17B26588-EF27-4F05-BE71-D7CFEFDF2986}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>Seagate.AAS.Utils</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Seagate.AAS.Utils</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\..\..\..\Framework Parsel HST\Assemblies\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="ZedGraph">
+      <HintPath>..\..\..\..\..\Framework Parsel HST\Assemblies\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Maths\DotNetMatrix\CholeskyDecomposition.cs" />
+    <Compile Include="Maths\DotNetMatrix\EigenvalueDecomposition.cs" />
+    <Compile Include="Maths\DotNetMatrix\GeneralMatrix.cs" />
+    <Compile Include="Maths\DotNetMatrix\LUDecomposition.cs" />
+    <Compile Include="Maths\DotNetMatrix\QRDecomposition.cs" />
+    <Compile Include="Maths\DotNetMatrix\SingularValueDecomposition.cs" />
+    <Compile Include="Maths\FunctionMinimum.cs" />
+    <Compile Include="Maths\LeastSquaresFit.cs" />
+    <Compile Include="Maths\Parser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cryptography.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EnumItem.cs" />
+    <Compile Include="FileUtils\FileUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FromPosition.cs" />
+    <Compile Include="Maths\Line.cs" />
+    <Compile Include="Maths\Vector.cs" />
+    <Compile Include="PersistentBinary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PersistentMDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PersistentXML.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PointStore\GenericPointStorage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PointStore\NPoint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PointStore\PointStorage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PointStore\PointStore.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PointStore\PointStoreViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PointStore\TeachPoint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PointStore\TeachPointHistory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PointStore\TeachPointStore.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PointStore\TeachPointGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PointStore\TeachPointHistoryGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PointStore\TeachPointHistoryChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PointStore\TeachPointStat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PointStore\TeacPointStore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProcessViewer\ProcessViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Profile\Events.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Profile\Ini.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Profile\IProfile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Profile\Profile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Profile\Setup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Registry\Registry.cs" />
+    <Compile Include="SerializableDictionary.cs" />
+    <Compile Include="SettingsXml.cs" />
+    <Compile Include="Stopwatch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StringUtils\StringUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Test\PersistentTestFixture.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Test\UtilsTestFixture.cs" />
+    <Compile Include="VectorMath.cs" />
+    <Compile Include="WaitList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="PointStore\PointStoreViewer.resx">
+      <DependentUpon>PointStoreViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointStore\TeachPointGrid.resx">
+      <DependentUpon>TeachPointGrid.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointStore\TeachPointHistoryGrid.resx">
+      <DependentUpon>TeachPointHistoryGrid.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointStore\TeachPointHistoryChart.resx">
+      <DependentUpon>TeachPointHistoryChart.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointStore\TeachPointStat.resx">
+      <DependentUpon>TeachPointStat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointStore\TeacPointStore.resx">
+      <DependentUpon>TeacPointStore.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcessViewer\ProcessViewer.resx">
+      <DependentUpon>ProcessViewer.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Seagate.AAS.UI\Seagate.AAS.UI\Seagate.AAS.UI.csproj">
+      <Project>{e5abc81e-7044-450a-8be7-6415db928271}</Project>
+      <Name>Seagate.AAS.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>call $(ProjectDir)..\Build\Scripts\verstamp.bat $(ProjectDir)</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName)==Release (copy $(TargetPath) $(ProjectDir)..\Assemblies)</PostBuildEvent>
+  </PropertyGroup>
+</Project>

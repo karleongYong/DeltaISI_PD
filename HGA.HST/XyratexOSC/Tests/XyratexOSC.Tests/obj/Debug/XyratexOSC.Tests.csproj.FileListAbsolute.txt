@@ -1,0 +1,10 @@
+C:\Projects\BDMS\XyratexOSC\Tests\XyratexOSC.Tests\bin\Debug\XyratexOSC.Tests.dll
+C:\Projects\BDMS\XyratexOSC\Tests\XyratexOSC.Tests\bin\Debug\XyratexOSC.Tests.pdb
+C:\Projects\BDMS\XyratexOSC\Tests\XyratexOSC.Tests\bin\Debug\XyratexOSC.dll
+C:\Projects\BDMS\XyratexOSC\Tests\XyratexOSC.Tests\bin\Debug\FbAwGEM64.dll
+C:\Projects\BDMS\XyratexOSC\Tests\XyratexOSC.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\BDMS\XyratexOSC\Tests\XyratexOSC.Tests\bin\Debug\XyratexOSC.pdb
+C:\Projects\BDMS\XyratexOSC\Tests\XyratexOSC.Tests\bin\Debug\XyratexOSC.xml
+C:\Projects\BDMS\XyratexOSC\Tests\XyratexOSC.Tests\obj\Debug\XyratexOSC.Tests.csprojResolveAssemblyReference.cache
+C:\Projects\BDMS\XyratexOSC\Tests\XyratexOSC.Tests\obj\Debug\XyratexOSC.Tests.dll
+C:\Projects\BDMS\XyratexOSC\Tests\XyratexOSC.Tests\obj\Debug\XyratexOSC.Tests.pdb

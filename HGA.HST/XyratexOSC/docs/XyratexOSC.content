@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Topics>
+  <Topic id="88f3c954-08ee-4d7f-a1eb-f58300d8f2a3" visible="True" isDefault="true" title="Overview" tocTitle="Overview">
+    <Topic id="3ba0c1df-a375-4404-8716-7595756fa901" visible="True" title="Integrating with VS2010" />
+    <Topic id="d2064fce-1054-409c-a25e-ea7503453e13" visible="True" title="Base Library" tocTitle="Base Library">
+      <Topic id="0a76fb82-b171-44b4-86f2-b47f36c896d9" visible="True" title="Base Library : Logging" tocTitle="Logging" />
+      <Topic id="ee68455c-3d07-436a-9447-e33f98d0b5d9" visible="True" title="Base Library : Licensing" tocTitle="Licensing" />
+      <Topic id="7cd5b2e1-4e35-4074-ae88-20581b047a9f" visible="True" title="Base Library : Settings Documents" tocTitle="Settings Documents" />
+    </Topic>
+  </Topic>
+</Topics>

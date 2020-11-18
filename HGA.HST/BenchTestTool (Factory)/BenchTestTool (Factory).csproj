@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1A66B9E1-F0E7-4251-953B-16A7291AADE8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BenchTestTool</RootNamespace>
+    <AssemblyName>BenchTestTool</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\ConfigurationSetupRecipe.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe38GetCalibrateOffset.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe39GetCalibrationOffset.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe44GetCableCalibrationResistanceResults.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe48GetShortDetectionThreshold.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe50GetTemp1Offset.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe51GetCableCalibrationCapacitanceResults.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe53GetPrecisorCapacitanceCompensation.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe14SetGetAllResultsByHGA.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe15SetGetBiasByHGA.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe16SetGetSensingByHGA.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe43SetFlexCableCalibration.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe44SetGetCableCalibrationResistanceResults.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe45SetCableCompensation.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe47SetShortDetectionThreshold.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe49SetTemp1Offset.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe51SetGetCableCalibrationCapacitanceResults.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe52SetPrecisorCapacitanceCompensation.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe53SetGetPrecisorCapacitanceCompensation.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe9SetStartMeasurement.cs" />
+    <Compile Include="Models\CurrentUserEventArgs.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\ApplicationSettings.cs" />
+    <Compile Include="Settings\INamed.cs" />
+    <Compile Include="Settings\NamedCollection.cs" />
+    <Compile Include="Settings\NamedConverter.cs" />
+    <Compile Include="Settings\TestProbePortSettings.cs" />
+    <Compile Include="Settings\User.cs" />
+    <Compile Include="Settings\UserAccessSettings.cs" />
+    <Compile Include="Settings\UserLevelEditor.cs" />
+    <Compile Include="Settings\UserPasswordEditor.cs" />
+    <Compile Include="UI\TabCableCalibration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmFunctionalTestsRecipeEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmFunctionalTestsRecipeEditor.Designer.cs">
+      <DependentUpon>frmFunctionalTestsRecipeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\IncomingTestProbeData\TestProbe21GetManualCalibration.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe20GetCalibrationData.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe18StartAutoCalibration.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe16GetSensingByHGA.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe15GetBiasByHGA.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe14GetAllResultsByHGA.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe13GetAllHGABiasVoltages.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe12GetAllHGACapacitanceResults.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe10GetAllHGAShortDetection.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe37GetFirmwareVersion.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe36StartSelfTest.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe35GetCapacitanceReadingFromLCRMeter.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe34GetAllHGACapacitanceSecondaryResults.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe33GetTemperature.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe31GetTemperatureCalibration.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe29GetADCVoltagesRead.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe28GetADCRead.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe25GetDACRead.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe23GetEEPROMRead.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe8GetOperationMode.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe7GetProductID.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbeGetStatusAndErrorCode.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe11GetAllHGAResistanceResults.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe32ConfigTemperatureMeasurement.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe31SetTemperatureCalibration.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe30SetMUX.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe29SetADCVoltagesRead.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe28SetADCRead.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe27ADCWrite.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe26DACOutputEnable.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe25SetDACRead.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe24DACWrite.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe23SetEEPROMRead.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe22EEPROMWrite.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe17CalibrationEnable.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe21SetManualCalibration.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe6HGAEnable.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe5MeasurementChannelEnable.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe4ConfigShortDetection.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe3ConfigCapacitanceMeasurement.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe2ConfigResistanceMeasurement.cs" />
+    <Compile Include="Data\FunctionalTestsRecipe.cs" />
+    <Compile Include="Data\TestProbeAPICommand.cs" />
+    <Compile Include="UI\HeaderUserAccess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\HeaderUserAccess.designer.cs">
+      <DependentUpon>HeaderUserAccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TabPrecisorCompensation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\SettingsObjectPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SettingsObjectPanel.designer.cs">
+      <DependentUpon>SettingsObjectPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserLoginControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserLoginControl.designer.cs">
+      <DependentUpon>UserLoginControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserPasswordChangeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserPasswordChangeForm.designer.cs">
+      <DependentUpon>UserPasswordChangeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\CommonFunctions.cs" />
+    <Compile Include="Utils\Enum.cs" />
+    <Compile Include="UI\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\TabBenchTests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TabPCBACalibration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TabConfigurationSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TabDebug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TabFunctionalTests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TestProbeUtility.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\PageLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PageLog.designer.cs">
+      <DependentUpon>PageLog.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmFunctionalTestsRecipeEditor.resx">
+      <DependentUpon>frmFunctionalTestsRecipeEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\HeaderUserAccess.resx">
+      <DependentUpon>HeaderUserAccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PageLog.resx">
+      <DependentUpon>PageLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SettingsObjectPanel.resx">
+      <DependentUpon>SettingsObjectPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserLoginControl.resx">
+      <DependentUpon>UserLoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserPasswordChangeForm.resx">
+      <DependentUpon>UserPasswordChangeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Seagate.AAS.Utils\Seagate.AAS.Utils.csproj">
+      <Project>{17b26588-ef27-4f05-be71-d7cfefdf2986}</Project>
+      <Name>Seagate.AAS.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XyratexOSC\XyratexOSC.csproj">
+      <Project>{c11da827-217a-458a-a446-87b6502b3ad4}</Project>
+      <Name>XyratexOSC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserAdministrator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserEngineer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserOperator.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

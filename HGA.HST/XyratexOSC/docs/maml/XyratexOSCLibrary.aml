@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="88f3c954-08ee-4d7f-a1eb-f58300d8f2a3" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <summary>
+	  <mediaLink>
+		<image xlink:href="BaseHeader"/>
+      </mediaLink>
+      <para>Welcome to the XyratexOSC Base Library help file.</para>
+    </summary>
+
+    <introduction>
+      <autoOutline />
+      <para>
+      The XyratexOSC base library provides a few basic features common 
+      to all of the XyratexOSC library components (motion, vision, and lighting) and 
+      that can be used elsewhere within a machine application. Examples include logging, 
+      tab-delimited settings files, and licensing.
+      </para>
+    </introduction>
+    <section address="LibraryOverview">
+      <title>Library Overview</title>
+      <content>
+        <para>
+        This library has been created using the .NET framework in C# and each component
+        has been separated into their own .NET assembly. Due to hardware-driver limitations
+        our machine computers current use a 32-bit version of the assemblies, but 64-bit
+        versions are also available for use on development machines.
+        </para>
+      </content>
+    </section>
+    <section address="BaseLibraryOverview">
+      <title>Base Library Help</title>
+      <content>
+      	<para>
+      	  Overview: <link xlink:href="d2064fce-1054-409c-a25e-ea7503453e13">Base Library Overview</link>
+      	</para>
+      	<para>
+      	  Code Reference: <codeEntityReference>N:XyratexOSC</codeEntityReference>
+      	</para>
+      </content>
+    </section>
+  </developerConceptualDocument>
+</topic>

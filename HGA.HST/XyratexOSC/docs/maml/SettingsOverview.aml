@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="7cd5b2e1-4e35-4074-ae88-20581b047a9f" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+      Settings documents are derived from text-based files that use tabbed lines to represent a tree of settings. The library
+      tries to mirror the .NET XML framework wherever possible. 
+      </para>
+    </introduction>
+    <section address="SettingsNodes">
+      <title>SettingsNodes</title>
+      <content>
+        <para>
+        A SettingsNode represents a single node in a settings document. Nodes hold a collection of child-nodes, or
+        a value. If a node has only a single-child node then the node is considered to 'have' a value; it's single
+        child node is considered a 'value' node. Nodes that have/are a value can be queried for a value (of any type
+        that can be properly represented as a string). These values are used for saving and loading 
+        settings/configuration/properties used by the application.
+        </para>
+      </content>
+    </section>
+    <section address="SettingsDocument">
+      <title>SettingsDocuments</title>
+      <content>
+        <para>
+        A Settings Document represents a settings-document file in memory. It is simply a top level
+        settings node (named with the file name) that contains the tree of nodes loaded from the settings
+        file.
+        </para>
+      </content>
+    </section>
+    <section address="ExampleDocument">
+      <title>Example Document</title>
+      <content>
+      <para>The following is a settings file used in the vision library to save/load vision tools:</para>
+            <code language="xml" title=" ">
+            <![CDATA[
+VTools
+	Tool1
+		Name
+			EdgeTool1
+		Type
+			XyratexOSC.Vision.Tools.EdgeTool
+		X
+			185
+		Y
+			131
+		Width
+			66
+		Height
+			100
+		ToolVisible
+			True
+		ResultVisible
+			True
+		Direction
+			North
+		EdgeType
+			First      
+            ]]>
+            </code>
+      </content>
+    </section>
+    <section address="ExampleCode">
+      <title>Example Code</title>
+      <content>
+      	<code language="C#">
+            <![CDATA[
+// Load the vision tool settings from file
+SettingsDocument toolSettings = new SettingsDocument("exampleTool.stp");  
+
+if (toolSettings.ExistsAndHasAValue("VTools|Tool1|X"))
+	int foo = toolSettings["VTools|Tool1|X"].GetValueAs<int>();
+         
+SettingsNodeList toolList = rootNode.SelectNodesStartingWith("Tool");
+
+if (toolList != null)
+{
+    for (int i = 0; i < toolList.Count; i++)
+    {
+        Tools.Tool newTool;
+        
+		// To avoid exceptions from improper file contents 
+		// always check that the settings node exists before reading
+        if (toolList[i]["Type"] != null && toolList[i]["Name"] != null)
+        {
+            newTool = CreateTool(toolList[i]["Type"].GetValueAs<string>(), toolList[i]["Name"].GetValueAs<string>());
+        }
+        else
+        {
+            MessageBox.Show("Invalid tool found in file.");
+            continue;
+        }
+
+        if (toolList[i]["X"] != null && toolList[i]["Y"] != null &&
+            toolList[i]["Width"] != null && toolList[i]["Height"] != null)
+        {
+            newTool.ROI = new Rectangle(toolList[i]["X"].GetValueAs<Int32>(),
+                                        toolList[i]["Y"].GetValueAs<Int32>(),
+                                        toolList[i]["Width"].GetValueAs<Int32>(),
+                                        toolList[i]["Height"].GetValueAs<Int32>());
+        }
+	}
+}
+          ]]>
+         </code>
+      </content>
+    </section>
+    <relatedTopics>
+      <codeEntityReference>N:XyratexOSC.Settings</codeEntityReference>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

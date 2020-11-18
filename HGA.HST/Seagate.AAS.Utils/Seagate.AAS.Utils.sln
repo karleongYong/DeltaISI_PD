@@ -1,0 +1,31 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C2E24F58-095E-42A6-BCA1-9F13C587E03A}"
+	ProjectSection(SolutionItems) = preProject
+		TestApp\bin\Debug\MySettings.config = TestApp\bin\Debug\MySettings.config
+		TestApp\bin\Debug\PointStorage.config = TestApp\bin\Debug\PointStorage.config
+		TestApp\bin\Debug\PointStore.bin = TestApp\bin\Debug\PointStore.bin
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seagate.AAS.Utils", "Seagate.AAS.Utils.csproj", "{17B26588-EF27-4F05-BE71-D7CFEFDF2986}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtilsApp", "TestApp\UtilsApp.csproj", "{14BB2D38-124B-459E-A7D7-EC73A44D4DDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17B26588-EF27-4F05-BE71-D7CFEFDF2986}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17B26588-EF27-4F05-BE71-D7CFEFDF2986}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17B26588-EF27-4F05-BE71-D7CFEFDF2986}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17B26588-EF27-4F05-BE71-D7CFEFDF2986}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14BB2D38-124B-459E-A7D7-EC73A44D4DDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14BB2D38-124B-459E-A7D7-EC73A44D4DDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14BB2D38-124B-459E-A7D7-EC73A44D4DDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

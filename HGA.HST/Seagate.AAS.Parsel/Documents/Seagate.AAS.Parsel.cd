@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Seagate.AAS.Parsel.ParselException">
+    <Position X="1" Y="1.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Seagate.AAS.Parsel.ParselException.Severity" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Exceptions\ParselException.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\ParselException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Seagate.AAS.Parsel.Services.InputEventArgs">
+    <Position X="7.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\ErrorHandler\ErrorHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Seagate.AAS.Parsel.Services.ErrorHandler" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="1.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAKAQASEAAAAAIgAQAEAgBCEAJAQHgBIQBIAAAAESA=</HashCode>
+      <FileName>Services\ErrorHandler\ErrorHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Seagate.AAS.Parsel.Services.ServiceManager">
+    <Position X="2.75" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AEAEABACAAAIAQAACAgBEAACACCAAAAAAAAAgQAAAEA=</HashCode>
+      <FileName>Services\ServiceManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Seagate.AAS.Parsel.Services.ErrorMessage">
+    <Position X="7.25" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAmAICAREAQQBAAYEiBiAAAAJAAAACICAQAA=</HashCode>
+      <FileName>Services\ErrorHandler\ErrorMessage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Seagate.AAS.Parsel.Services.ConfigData">
+    <Position X="9.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\AppConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Seagate.AAS.Parsel.Services.AppConfigSection">
+    <Position X="9.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAACABAAAAIAAAAAAQACAAAAAAAAAEAAAQgAAA=</HashCode>
+      <FileName>Services\AppConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Seagate.AAS.Parsel.Services.AppConfigService" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACCAAAAAAIAAAAgAAAAAAIAAAAAAAAAAQgACA=</HashCode>
+      <FileName>Services\AppConfig.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Seagate.AAS.Parsel.Services.Folder">
+    <Position X="11.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\DirectoryLocator\DirectoryLocator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Seagate.AAS.Parsel.Services.Folders">
+    <Position X="11.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAACAAAAAAACAgAABAAAAAAAAAgAAA=</HashCode>
+      <FileName>Services\DirectoryLocator\DirectoryLocator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Seagate.AAS.Parsel.Services.DirectoryLocator" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAACAAAAACAAAAAAACACAAAAA=</HashCode>
+      <FileName>Services\DirectoryLocator\DirectoryLocator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Seagate.AAS.Parsel.Services.Tracing">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="Seagate.AAS.Parsel.Services.Tracing.SetControlTextDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Services\Tracing\Tracing.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="Seagate.AAS.Parsel.Services.Tracing.SetControlTextAndColorDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Services\Tracing\Tracing.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AABAAAACAAAAAKAAAIAAAECAAAQAABAAAoAoAIAAACA=</HashCode>
+      <FileName>Services\Tracing\Tracing.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Seagate.AAS.Parsel.Services.TraceMessage">
+    <Position X="13" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAACAAgAAAAIAAAAAAAAAAAAAAAAAAAAAIAAAASA=</HashCode>
+      <FileName>Services\Tracing\TraceMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Seagate.AAS.Parsel.Services.MenuNavigator">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="Seagate.AAS.Parsel.Services.MenuNavigator.ViewChangedHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Services\MenuNavigator.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQBAQAAKAACCAAAgAAAIAIAIAAYAAAAAaAGACgAAQA=</HashCode>
+      <FileName>Services\MenuNavigator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Seagate.AAS.Parsel.Services.Message">
+    <Position X="16.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAAAA=</HashCode>
+      <FileName>Services\Messaging.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Seagate.AAS.Parsel.Services.MessageChannel">
+    <Position X="16.5" Y="4" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="Seagate.AAS.Parsel.Services.MessageChannel.ReceiveMessageHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Services\Messaging.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAIAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Messaging.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Seagate.AAS.Parsel.Services.Messaging" BaseTypeListCollapsed="true">
+    <Position X="16.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAAgAAAAACA=</HashCode>
+      <FileName>Services\Messaging.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Seagate.AAS.Parsel.Services.FormLayout">
+    <Position X="18.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIACAQAAAAAAAAAAAIAAEAAAAAAAAIAAAAAACCA=</HashCode>
+      <FileName>Services\FormLayout.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Delegate Name="Seagate.AAS.Parsel.Services.ErrorInputHandler">
+    <Position X="7.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Services\ErrorHandler\ErrorHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

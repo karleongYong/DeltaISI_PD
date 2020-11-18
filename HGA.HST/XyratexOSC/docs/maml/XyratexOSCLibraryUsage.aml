@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="3ba0c1df-a375-4404-8716-7595756fa901" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+      The XyratexOSC libraries have been designed to be easily integrated
+      into the Visual Studio 2010 Designer. This topic will discuss how
+      to add our libraries into the Designer Toolbox, and how to use the
+      libraries without the designer.
+      </para>
+    </introduction>
+    <section address="Designer">
+      <title>Using Libraries with VS2010 Designer</title>
+      <content>
+        <mediaLink>
+		  <image xlink:href="AddingLibraryComponents1"/>
+		</mediaLink>
+		<list class="nobullet">
+		  <listItem>1. Open any Form in Designer and right-click within the Designer Toolbox 
+		  (if the toolbox is not displayed, it can be opened through View &gt; Toolbox).</listItem>
+		  <listItem>2. Select the 'Choose Items...' menu item.</listItem>
+		</list>
+		<mediaLink>
+		  <image xlink:href="AddingLibraryComponents2"/>
+		</mediaLink>
+		<list class="nobullet">
+		  <listItem>3. Under the .NET framework components tab, browse to XyratexOSC &gt; bin &gt; x86, 
+		  and select the XyratexOSC.libraryname.dll's that you want to use.</listItem>
+		  <listItem>4. Check the components that you want to add to the designer toolbox.</listItem>
+		</list>
+		<mediaLink>
+		  <image xlink:href="AddingLibraryComponents3"/>
+		</mediaLink>
+		<list class="nobullet">
+		  <listItem>5. Drag-and-drop components from the toolbox onto the app form.</listItem>
+		</list>
+      </content>
+    </section>
+    <section address="Program">
+      <title>Using Libraries Programmatically</title>
+      <content>
+        <para>
+        The motion, vision, and lighting components have an initialization step separate from instantiation, 
+        so that logging and configuration-file properties set before initialization. The designer handles 
+        these steps automatically, but if designer is being avoided follow these steps:
+        </para>
+        <list class="ordered">
+		  <listItem>Instantiate the library component of interest (named 'somelibraryComponent').</listItem>
+		  <listItem>Optionally, set the component properties for Log, InitLog, and ConfigFilePath.</listItem>
+		  <listItem>Invoke the component EndInit() method.</listItem>
+		</list>
+	    <code language="C#">
+		<![CDATA[VisionComponent _vision;
+
+private void InitializeApplication()
+{
+    _vision = new XyratexOSC.Vision.VisionComponent();
+    
+    _vision.ConfigFilePath = "Vision.config";
+    _vision.InitLog = new Logger();
+    _vision.Log = new Logger();
+    _vision.ThrowExceptions = false;
+    
+    _vision.EndInit();
+}]]>
+		</code>
+      </content>
+    </section>
+  </developerConceptualDocument>
+</topic>

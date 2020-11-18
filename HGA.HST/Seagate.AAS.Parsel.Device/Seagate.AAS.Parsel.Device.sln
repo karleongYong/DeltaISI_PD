@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seagate.AAS.Parsel.Device", "Seagate.AAS.Parsel.Device.csproj", "{F4904E90-B0A0-468D-89C7-6D847D638F3D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4904E90-B0A0-468D-89C7-6D847D638F3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4904E90-B0A0-468D-89C7-6D847D638F3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4904E90-B0A0-468D-89C7-6D847D638F3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4904E90-B0A0-468D-89C7-6D847D638F3D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

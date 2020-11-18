@@ -1,0 +1,9 @@
+tocTab[tocTab.length] = new Array("0.1.1.1.1.1.1.11.4:1", "", "Utils", "EARoot/EA1/EA1/EA1/EA1/EA1/EA1/EA11/EA4/EA363.htm", "3.png", "86", "0", "", "Logical diagram0","{1D694B1E-CD76-4c01-B7C4-C7E7230084C5}");
+tocTab[tocTab.length] = new Array("0.1.1.1.1.1.1.11.4:2", "", "FolaTagDataPanel", "EARoot/EA1/EA1/EA1/EA1/EA1/EA1/EA11/EA4/EA366.htm", "5.png", "E1488", "0", "", "Class0","{70BDB7C8-1A8B-423b-879F-773E85C39964}");
+tocTab[tocTab.length] = new Array("0.1.1.1.1.1.1.11.4:3", "", "FolaTagDataPanel", "EARoot/EA1/EA1/EA1/EA1/EA1/EA1/EA11/EA4/EA367.htm", "5.png", "E1487", "0", "", "Class0","{1A992D61-D489-4d55-9B1D-654EBCA733E7}");
+tocTab[tocTab.length] = new Array("0.1.1.1.1.1.1.11.4:4", "", "ListViewEx", "EARoot/EA1/EA1/EA1/EA1/EA1/EA1/EA11/EA4/EA368.htm", "5.png", "E1492", "0", "", "Class0","{1D2D28DE-F26F-43ee-929F-E79B14DD6AD8}");
+tocTab[tocTab.length] = new Array("0.1.1.1.1.1.1.11.4:5", "", "PartsCheckDisplay", "EARoot/EA1/EA1/EA1/EA1/EA1/EA1/EA11/EA4/EA369.htm", "5.png", "E1494", "0", "", "Class0","{26535F7B-8AF7-4d72-9784-C70E19FEDA68}");
+tocTab[tocTab.length] = new Array("0.1.1.1.1.1.1.11.4:6", "", "PartsCheckDisplay", "EARoot/EA1/EA1/EA1/EA1/EA1/EA1/EA11/EA4/EA370.htm", "5.png", "E1493", "0", "", "Class0","{BCE13F09-6B7F-4c4c-9932-F105C3BC13A3}");
+tocTab[tocTab.length] = new Array("0.1.1.1.1.1.1.11.4:7", "", "«struct» RECT", "EARoot/EA1/EA1/EA1/EA1/EA1/EA1/EA11/EA4/EA371.htm", "5.png", "E1489", "E1492", "", "Class0","{8AF13CBF-D90E-4427-91E4-D38DE419333D}");
+tocTab[tocTab.length] = new Array("0.1.1.1.1.1.1.11.4:8", "", "SubItem", "EARoot/EA1/EA1/EA1/EA1/EA1/EA1/EA11/EA4/EA372.htm", "5.png", "E1491", "E1492", "", "Class0","{14D637CA-3915-4fe3-8303-F2386AD46F7F}");
+tocTab[tocTab.length] = new Array("0.1.1.1.1.1.1.11.4:9", "", "Win32", "EARoot/EA1/EA1/EA1/EA1/EA1/EA1/EA11/EA4/EA373.htm", "5.png", "E1490", "E1492", "", "Class0","{6BBCC5EA-7F55-40f3-93FF-A9D00171EFBB}");

@@ -1,0 +1,1000 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6C594F92-5634-4268-AAC7-F311FE12543A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Seagate.AAS.HGA.HST</RootNamespace>
+    <AssemblyName>HST</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;TestOpt1SoftwareTrigger</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aerotech.A3200">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Aerotech\A3200\Bin\Aerotech.A3200.dll</HintPath>
+    </Reference>
+    <Reference Include="Aerotech.Common">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Aerotech\A3200\Bin\Aerotech.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=4.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.1.1\lib\net40\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cognex.VisionPro, Version=47.0.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Cognex\VisionPro\ReferencedAssemblies\Cognex.VisionPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.Blob, Version=47.0.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Cognex\VisionPro\ReferencedAssemblies\Cognex.VisionPro.Blob.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.Controls, Version=47.0.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Cognex\VisionPro\ReferencedAssemblies\Cognex.VisionPro.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.Core, Version=47.0.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Cognex\VisionPro\ReferencedAssemblies\Cognex.VisionPro.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.Database, Version=47.0.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Cognex\VisionPro\ReferencedAssemblies\Cognex.VisionPro.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.Display.Controls, Version=47.0.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Cognex\VisionPro\ReferencedAssemblies\Cognex.VisionPro.Display.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.FGGigE, Version=47.0.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Cognex\VisionPro\ReferencedAssemblies\Cognex.VisionPro.FGGigE.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.ImageFile, Version=47.0.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Cognex\VisionPro\ReferencedAssemblies\Cognex.VisionPro.ImageFile.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.ImageProcessing, Version=47.0.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Cognex\VisionPro\ReferencedAssemblies\Cognex.VisionPro.ImageProcessing.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.Inspection, Version=47.0.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Cognex\VisionPro\ReferencedAssemblies\Cognex.VisionPro.Inspection.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.Inspection.Controls, Version=47.0.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Cognex\VisionPro\ReferencedAssemblies\Cognex.VisionPro.Inspection.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.PMAlign, Version=47.0.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Cognex\VisionPro\ReferencedAssemblies\Cognex.VisionPro.PMAlign.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.ToolGroup, Version=47.0.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Cognex\VisionPro\ReferencedAssemblies\Cognex.VisionPro.ToolGroup.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.VisionPro.ToolGroup.Controls, Version=47.0.0.0, Culture=neutral, PublicKeyToken=ef0f902af9dee505, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Cognex\VisionPro\ReferencedAssemblies\Cognex.VisionPro.ToolGroup.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="FisApi">
+      <HintPath>Lib\FisApi.dll</HintPath>
+    </Reference>
+    <Reference Include="FisRunLibNet, Version=1.0.1949.16447, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\FisRunLibNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Seagate.AAS.IO">
+      <HintPath>Lib\Seagate.AAS.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Seagate.AAS.IO.Serial">
+      <HintPath>Lib\Seagate.AAS.IO.Serial.dll</HintPath>
+    </Reference>
+    <Reference Include="Seagate.AAS.Parsel.Device.RFID, Version=4.0.1606.582, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Seagate.AAS.Parsel.Device.RFID\bin\Debug\Seagate.AAS.Parsel.Device.RFID.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.IO, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.IO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\ControllerHST.cs" />
+    <Compile Include="Controllers\DataManagingController.cs" />
+    <Compile Include="Controllers\FileManageController.cs" />
+    <Compile Include="Controllers\ImageFileManageController.cs" />
+    <Compile Include="Controllers\InputEEController.cs" />
+    <Compile Include="Controllers\MonitorController.cs" />
+    <Compile Include="Controllers\OmronSafetyController.cs" />
+    <Compile Include="Controllers\OutputClampRotateController.cs" />
+    <Compile Include="Controllers\OutputEEController.cs" />
+    <Compile Include="Controllers\OutputStationController.cs" />
+    <Compile Include="Controllers\OutputTurnStationController.cs" />
+    <Compile Include="Controllers\PrecisorStationController.cs" />
+    <Compile Include="Controllers\ReadWriteRFIDController.cs" />
+    <Compile Include="Controllers\TDFDataRunController.cs" />
+    <Compile Include="Controllers\TestProbeController.cs" />
+    <Compile Include="Controllers\InputTurnStationController.cs" />
+    <Compile Include="Controllers\InputStationController.cs" />
+    <Compile Include="Data\ANCSetting.cs" />
+    <Compile Include="Data\BaseCarrier.cs" />
+    <Compile Include="Data\Carrier.cs" />
+    <Compile Include="Data\CarrierCycleTime.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe60GetShortDetectionThreshold.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe63GetLDUAndLEDData.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe67GetCurrentRatio.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe71GetShortDetectionVolThreshold.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe79GetAllBiasVoltage.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe80GetAllSensingVoltage.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe86GetPhotodiodeDataByHGA.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe87GetLDUConfiguration_2.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe88GetHalfLDUAndLEDData.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe89GetHalfPhotoDiodeData.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe59SetShortDetectionThreshold.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe63SetGetLDUDataByHGA.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe66SetCurrentRatio.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe68SetShortDetectionVolThreshold.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe81SetSwapCH3AndCH4.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe85SetLDUConfiguration_2.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe86RequestPhotoDiodeVoltageByHga.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe88Request_5_LDUAndLEDData.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe89RequestPDVoltage.cs" />
+    <Compile Include="Data\SamplingData.cs" />
+    <Compile Include="Data\CumulativeCountofConforming\CCCOutput.cs" />
+    <Compile Include="Data\CumulativeCountofConforming\CCCParameter.cs" />
+    <Compile Include="Data\CumulativeCountofConforming\CCCRunResult.cs" />
+    <Compile Include="Data\CumulativeCountofConforming\HSTCCCControl.cs" />
+    <Compile Include="Data\CumulativeCountofConforming\TicFailureCounter.cs" />
+    <Compile Include="Data\DycemCleaningCounterData.cs" />
+    <Compile Include="Data\CompensationInfo.cs" />
+    <Compile Include="Data\ConfigPerformanceBase.cs" />
+    <Compile Include="Data\ConfigurationSetupRecipe.cs" />
+    <Compile Include="Data\FunctionalTestsRecipe.cs" />
+    <Compile Include="Data\IBSObj.cs" />
+    <Compile Include="Data\ImageManaging.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe43StartFlexCableCalibration.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe44GetCableCalibrationResistanceResults.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe48GetShortDetectionThreshold.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe50GetTemp1Offset.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe51GetCableCalibrationCapacitanceResults.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe55GetResMeasConfiguration.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe58GetResMeas2Configuration.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe72GetVolDelta.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe75GetAllBiasVoltage.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe76GetAllSensingVoltage.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe7GetConversionBoardID.cs" />
+    <Compile Include="Data\MachineUPH.cs" />
+    <Compile Include="Data\MeasurementTestRecipe.cs" />
+    <Compile Include="Data\Hga.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe10GetAllHGAShortDetection.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe11GetAllHGAResistanceResults.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe12GetAllHGACapacitanceResults.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe13GetAllHGABiasVoltages.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe14GetAllResultsByHGA.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe15GetBiasByHGA.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe16GetSensingByHGA.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe18StartAutoCalibration.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe20GetCalibrationData.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe21GetManualCalibration.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe23GetEEPROMRead.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe25GetDACRead.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe28GetADCRead.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe29GetADCVoltagesRead.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe31GetTemperatureCalibration.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe33GetTemperature.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe34GetAllHGACapacitanceSecondaryResults.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe35GetCapacitanceReadingFromLCRMeter.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe36StartSelfTest.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe37GetFirmwareVersion.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe38GetCalibrateOffset.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe39GetCalibrationOffset.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbe8GetOperationMode.cs" />
+    <Compile Include="Data\IncomingTestProbeData\TestProbeGetStatusAndErrorCode.cs" />
+    <Compile Include="Data\NetworkDrives.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe14SetGetAllResultsByHGA.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe15SetGetBiasByHGA.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe16SetGetSensingByHGA.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe17CalibrationEnable.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe21SetManualCalibration.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe22EEPROMWrite.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe23SetEEPROMRead.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe24DACWrite.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe25SetDACRead.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe26DACOutputEnable.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe27ADCWrite.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe28SetADCRead.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe29SetADCVoltagesRead.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe2ConfigResistanceMeasurement.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe30SetMUX.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe31SetTemperatureCalibration.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe32ConfigTemperatureMeasurement.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe3ConfigCapacitanceMeasurement.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe43SetFlexCableCalibration.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe44SetGetCableCalibrationResistanceResults.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe45SetCableCompensation.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe47SetShortDetectionThreshold.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe49SetTemp1Offset.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe4ConfigShortDetection.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe51SetGetCableCalibrationCapacitanceResults.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe57ConfigResistanceMeasurement2.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe5MeasurementChannelEnable.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe6HGAEnable.cs" />
+    <Compile Include="Data\OutgoingTestProbeData\TestProbe9SetStartMeasurement.cs" />
+    <Compile Include="Data\ProcessStopWatch.cs" />
+    <Compile Include="Data\ProductionCounterData.cs" />
+    <Compile Include="Data\RetrestProcessDataLogcs.cs" />
+    <Compile Include="Data\RFIDInfo.cs" />
+    <Compile Include="Data\SeatrackLoadData.cs" />
+    <Compile Include="Data\SldrParamBinData.cs" />
+    <Compile Include="Data\TDFOutput.cs" />
+    <Compile Include="Data\TestProbeAPICommand.cs" />
+    <Compile Include="Data\TowerLightAndDoorLockStatusEventArgs.cs" />
+    <Compile Include="Data\TriggeringConfig.cs" />
+    <Compile Include="Data\WorkOrderData.cs" />
+    <Compile Include="Data\WorkOrderInfo.cs" />
+    <Compile Include="Exceptions\ControllerException.cs" />
+    <Compile Include="Exceptions\HandlerException.cs" />
+    <Compile Include="Exceptions\HandlerExceptionBase.cs" />
+    <Compile Include="Exceptions\HSTException.cs" />
+    <Compile Include="Exceptions\ProcessException.cs" />
+    <Compile Include="Machine\ARAMSStateHST.cs" />
+    <Compile Include="Machine\HSTIOManifest.cs" />
+    <Compile Include="Machine\SetupConfigHST.cs" />
+    <Compile Include="Models\CSVEventArgs.cs" />
+    <Compile Include="Models\CurrentUserEventArgs.cs" />
+    <Compile Include="Models\DataLog.cs" />
+    <Compile Include="Models\TemperaturesEventArgs.cs" />
+    <Compile Include="Models\TestElectronicsStatusEventArgs.cs" />
+    <Compile Include="Models\TestFirmwareEventArgs.cs" />
+    <Compile Include="Process\ActiveProcessHST.cs" />
+    <Compile Include="Process\DataManagingProcess.cs" />
+    <Compile Include="Process\FileManageProcess.cs" />
+    <Compile Include="Process\GetputMonitoringProcess.cs" />
+    <Compile Include="Process\ImageFileManageProcess.cs" />
+    <Compile Include="Process\MonitorIOState.cs" />
+    <Compile Include="Process\OutputClampRotateProcess.cs" />
+    <Compile Include="Process\RunTestScriptProcess.cs" />
+    <Compile Include="Process\InputEEProcess.cs" />
+    <Compile Include="Process\EventParam.cs" />
+    <Compile Include="Process\MonitorProcess.cs" />
+    <Compile Include="Process\OutputEEProcess.cs" />
+    <Compile Include="Process\OutputStationProcess.cs" />
+    <Compile Include="Process\OutputTurnStationProcess.cs" />
+    <Compile Include="Process\PrecisorStationProcess.cs" />
+    <Compile Include="Process\ProcessHST.cs" />
+    <Compile Include="Process\TDFDataRunProcess.cs" />
+    <Compile Include="Process\TestProbeProcess.cs" />
+    <Compile Include="Process\InputTurnStationProcess.cs" />
+    <Compile Include="Process\InputStationProcess.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Recipe\TeachPointRecipe.cs" />
+    <Compile Include="Settings\CarrierSettings.cs" />
+    <Compile Include="Settings\CarrierSettingsEditor.cs" />
+    <Compile Include="Settings\DelaySettings.cs" />
+    <Compile Include="Settings\AutomationConfigSettings.cs" />
+    <Compile Include="Settings\CalibrationSettings.cs" />
+    <Compile Include="Settings\GompertzSettings.cs" />
+    <Compile Include="Settings\HGAProductInfo.cs" />
+    <Compile Include="Settings\HGAProductSetting.cs" />
+    <Compile Include="Settings\HGAProductType.cs" />
+    <Compile Include="Settings\HGAProductTypeEditor.cs" />
+    <Compile Include="Settings\HSTSettings.cs" />
+    <Compile Include="Machine\HSTHwSystem.cs" />
+    <Compile Include="Machine\HSTMachine.cs" />
+    <Compile Include="Machine\HSTWorkcell.cs" />
+    <Compile Include="Machine\Program.cs" />
+    <Compile Include="Settings\DirectorySettings.cs" />
+    <Compile Include="Settings\INamed.cs" />
+    <Compile Include="Settings\InstallSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\MaintenanceAccessEditor.cs" />
+    <Compile Include="Settings\NamedCollection.cs" />
+    <Compile Include="Settings\NamedConverter.cs" />
+    <Compile Include="Settings\RFIDPortSettings.cs" />
+    <Compile Include="Settings\SafetyControllerPortSettings.cs" />
+    <Compile Include="Settings\SettingsHelper.cs" />
+    <Compile Include="Settings\MeasurementTestSettings.cs" />
+    <Compile Include="Settings\SimulatedPartSettings.cs" />
+    <Compile Include="Settings\TestProbeType.cs" />
+    <Compile Include="Settings\TestProbeTypeEditor.cs" />
+    <Compile Include="Settings\User.cs" />
+    <Compile Include="Settings\UserAccessSettings.cs" />
+    <Compile Include="Settings\UserLevelEditor.cs" />
+    <Compile Include="Settings\UserPasswordEditor.cs" />
+    <Compile Include="Settings\MoveProfileSettings.cs" />
+    <Compile Include="Settings\VisionSettings.cs" />
+    <Compile Include="UI\Diagnostics\IOControlPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Diagnostics\IOControlPanel.Designer.cs">
+      <DependentUpon>IOControlPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Diagnostics\MotionControlPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Diagnostics\MotionControlPanel.Designer.cs">
+      <DependentUpon>MotionControlPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Diagnostics\SelfCheckPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Diagnostics\SelfCheckPanel.Designer.cs">
+      <DependentUpon>SelfCheckPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Diagnostics\TestElectronicsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Diagnostics\TestElectronicsPanel.Designer.cs">
+      <DependentUpon>TestElectronicsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormMainE95.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormMainE95.designer.cs">
+      <DependentUpon>FormMainE95.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\HeaderUserAccess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\HeaderUserAccess.Designer.cs">
+      <DependentUpon>HeaderUserAccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Main\PanelHelp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Main\PanelHelp.Designer.cs">
+      <DependentUpon>PanelHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Main\PanelRecipe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Main\PanelRecipe.Designer.cs">
+      <DependentUpon>PanelRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Main\PanelData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Main\PanelData.Designer.cs">
+      <DependentUpon>PanelData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Main\PanelDiagnostics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Main\PanelDiagnostics.Designer.cs">
+      <DependentUpon>PanelDiagnostics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Main\PanelOperation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Main\PanelOperation.Designer.cs">
+      <DependentUpon>PanelOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Main\PanelSetup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Main\PanelSetup.Designer.cs">
+      <DependentUpon>PanelSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Diagnostics\RFIDPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Diagnostics\RFIDPanel.designer.cs">
+      <DependentUpon>RFIDPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Operation\CogDisplayPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Operation\CogDisplayPanel.Designer.cs">
+      <DependentUpon>CogDisplayPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Operation\OperationMainPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Operation\OperationMainPanel.Designer.cs">
+      <DependentUpon>OperationMainPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Operation\OperationModulesState.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Operation\OperationModulesState.Designer.cs">
+      <DependentUpon>OperationModulesState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Operation\OperationStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Operation\OperationStatus.Designer.cs">
+      <DependentUpon>OperationStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Operation\VisionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Operation\VisionPanel.Designer.cs">
+      <DependentUpon>VisionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Operation\VisionPanel2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Operation\VisionPanel2.Designer.cs">
+      <DependentUpon>VisionPanel2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Operation\WorkOrder\DycemCleaningCounter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Operation\WorkOrder\DycemCleaningCounter.designer.cs">
+      <DependentUpon>DycemCleaningCounter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Operation\WorkOrder\FunctionalTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Operation\WorkOrder\FunctionalTest.Designer.cs">
+      <DependentUpon>FunctionalTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Operation\WorkOrder\MeasurementTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Operation\WorkOrder\MeasurementTest.Designer.cs">
+      <DependentUpon>MeasurementTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PanelAnalogInput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PanelAnalogInput.Designer.cs">
+      <DependentUpon>PanelAnalogInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PanelCommand.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PanelCommand.designer.cs">
+      <DependentUpon>PanelCommand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Operation\WorkOrder\ProductionCounter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Operation\WorkOrder\ProductionCounter.Designer.cs">
+      <DependentUpon>ProductionCounter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Operation\WorkOrder\UnloadInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Operation\WorkOrder\UnloadInformation.Designer.cs">
+      <DependentUpon>UnloadInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Operation\WorkOrder\WOInformationPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Operation\WorkOrder\WOInformationPanel.Designer.cs">
+      <DependentUpon>WOInformationPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PanelDigitalInput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PanelDigitalInput.Designer.cs">
+      <DependentUpon>PanelDigitalInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PanelDigitalOutput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PanelDigitalOutput.Designer.cs">
+      <DependentUpon>PanelDigitalOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PanelNavigation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PanelNavigation.Designer.cs">
+      <DependentUpon>PanelNavigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PanelTitle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PanelTitle.designer.cs">
+      <DependentUpon>PanelTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProductTypeSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProductTypeSelectionForm.designer.cs">
+      <DependentUpon>ProductTypeSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TestProbeUtility.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Utils\CCCAlertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Utils\CCCAlertForm.Designer.cs">
+      <DependentUpon>CCCAlertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Utils\FolaTagDataPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Utils\FolaTagDataPanel.Designer.cs">
+      <DependentUpon>FolaTagDataPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Utils\ListViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\MeasurementTestRecipeEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MeasurementTestRecipeEditor.Designer.cs">
+      <DependentUpon>MeasurementTestRecipeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PageLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PageLog.designer.cs">
+      <DependentUpon>PageLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SettingsObjectPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SettingsObjectPanel.designer.cs">
+      <DependentUpon>SettingsObjectPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserLoginControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserLoginControl.designer.cs">
+      <DependentUpon>UserLoginControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserPasswordChangeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserPasswordChangeForm.designer.cs">
+      <DependentUpon>UserPasswordChangeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\CommonFunctions.cs" />
+    <Compile Include="Utils\CommonTools.cs" />
+    <Compile Include="UI\Utils\PartsCheckDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Utils\PartsCheckDisplay.Designer.cs">
+      <DependentUpon>PartsCheckDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\CSVFileOutput.cs" />
+    <Compile Include="Utils\Enums.cs" />
+    <Compile Include="Utils\FileChangeNotifier.cs" />
+    <Compile Include="Utils\FISManager.cs" />
+    <Compile Include="Utils\Formatting.cs" />
+    <Compile Include="Utils\GIDEntryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\GIDEntryForm.designer.cs">
+      <DependentUpon>GIDEntryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\MultipleAxisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\MultipleAxisForm.designer.cs">
+      <DependentUpon>MultipleAxisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\RFIDTool.cs" />
+    <Compile Include="Utils\SingleAxisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\SingleAxisForm.designer.cs">
+      <DependentUpon>SingleAxisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Utils.cs" />
+    <Compile Include="Utils\WorkOrderTool.cs" />
+    <Compile Include="Vision\VisionSystem.cs" />
+    <Compile Include="Web References\SeagateDataBaseLogIn\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SeagateDataBaseLogIn\InitStatus1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SeagateDataBaseLogIn\LoginInfo1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SeagateDataBaseLogIn\MachinePassword1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SeagateDataBaseLogIn\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SeagateDataBaseLogIn\RoleInfo1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SeagateDataBaseLogIn\service.wsdl" />
+    <None Include="Web References\SeagateDataBaseLogIn\StaffInfo1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SeagateDataBaseLogIn\UserInfo1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SeagateDataBaseLogIn\WriteStatus1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Diagnostics\IOControlPanel.resx">
+      <DependentUpon>IOControlPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Diagnostics\MotionControlPanel.resx">
+      <DependentUpon>MotionControlPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Diagnostics\SelfCheckPanel.resx">
+      <DependentUpon>SelfCheckPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Diagnostics\TestElectronicsPanel.resx">
+      <DependentUpon>TestElectronicsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormMainE95.resx">
+      <DependentUpon>FormMainE95.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\HeaderUserAccess.resx">
+      <DependentUpon>HeaderUserAccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Main\PanelHelp.resx">
+      <DependentUpon>PanelHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Main\PanelRecipe.resx">
+      <DependentUpon>PanelRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Main\PanelData.resx">
+      <DependentUpon>PanelData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Main\PanelDiagnostics.resx">
+      <DependentUpon>PanelDiagnostics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Main\PanelOperation.resx">
+      <DependentUpon>PanelOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Main\PanelSetup.resx">
+      <DependentUpon>PanelSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Diagnostics\RFIDPanel.resx">
+      <DependentUpon>RFIDPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Operation\CogDisplayPanel.resx">
+      <DependentUpon>CogDisplayPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Operation\OperationMainPanel.resx">
+      <DependentUpon>OperationMainPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Operation\OperationModulesState.resx">
+      <DependentUpon>OperationModulesState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Operation\OperationStatus.resx">
+      <DependentUpon>OperationStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Operation\VisionPanel.resx">
+      <DependentUpon>VisionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Operation\VisionPanel2.resx">
+      <DependentUpon>VisionPanel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Operation\WorkOrder\FunctionalTest.resx">
+      <DependentUpon>FunctionalTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Operation\WorkOrder\MeasurementTest.resx">
+      <DependentUpon>MeasurementTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PanelAnalogInput.resx">
+      <DependentUpon>PanelAnalogInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PanelCommand.resx">
+      <DependentUpon>PanelCommand.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Operation\WorkOrder\ProductionCounter.resx">
+      <DependentUpon>ProductionCounter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Operation\WorkOrder\UnloadInformation.resx">
+      <DependentUpon>UnloadInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Operation\WorkOrder\WOInformationPanel.resx">
+      <DependentUpon>WOInformationPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PanelDigitalInput.resx">
+      <DependentUpon>PanelDigitalInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PanelDigitalOutput.resx">
+      <DependentUpon>PanelDigitalOutput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PanelNavigation.resx">
+      <DependentUpon>PanelNavigation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PanelTitle.resx">
+      <DependentUpon>PanelTitle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProductTypeSelectionForm.resx">
+      <DependentUpon>ProductTypeSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Utils\CCCAlertForm.resx">
+      <DependentUpon>CCCAlertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Utils\FolaTagDataPanel.resx">
+      <DependentUpon>FolaTagDataPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MeasurementTestRecipeEditor.resx">
+      <DependentUpon>MeasurementTestRecipeEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PageLog.resx">
+      <DependentUpon>PageLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SettingsObjectPanel.resx">
+      <DependentUpon>SettingsObjectPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserLoginControl.resx">
+      <DependentUpon>UserLoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserPasswordChangeForm.resx">
+      <DependentUpon>UserPasswordChangeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Utils\PartsCheckDisplay.resx">
+      <DependentUpon>PartsCheckDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\GIDEntryForm.resx">
+      <DependentUpon>GIDEntryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\MultipleAxisForm.resx">
+      <DependentUpon>MultipleAxisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\SingleAxisForm.resx">
+      <DependentUpon>SingleAxisForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GCL52FW.DLL">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Web References\SeagateDataBaseLogIn\service.disco" />
+    <None Include="packages.config" />
+    <None Include="Resources\Diag_vdo.bmp" />
+    <None Include="Resources\down_disabled.png" />
+    <None Include="Resources\down_enabled.png" />
+    <None Include="Resources\pause-64x64.png" />
+    <None Include="Resources\pauseChecked.png" />
+    <None Include="Resources\play-64x64.png" />
+    <None Include="Resources\playChecked.png" />
+    <None Include="Resources\SeaLogo.png" />
+    <None Include="Resources\stop-64x64.png" />
+    <None Include="Resources\UserAdministrator.png" />
+    <None Include="Resources\UserEngineer.png" />
+    <None Include="Resources\UserOperator.png" />
+    <None Include="Resources\newas.png" />
+    <None Include="Resources\Automation.JPG" />
+    <Content Include="Resources\edit.png" />
+    <None Include="Resources\windows.png" />
+    <None Include="Resources\harddisk_icon.png" />
+    <None Include="Resources\Init.ICO" />
+    <Content Include="Resources\Seaveyor.png" />
+    <None Include="Resources\UserMonitor.png" />
+    <None Include="Resources\TitleBackground.png" />
+    <Content Include="RFID.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework Parsel HST\Components\qf4net\src\qf4net.csproj">
+      <Project>{068cd5cc-1000-430b-a575-a1e5644edfd3}</Project>
+      <Name>qf4net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework Parsel HST\Seagate.AAS.EFI.Log\Seagate.AAS.EFI.Log.csproj">
+      <Project>{da21d146-0e58-49c6-bf18-9aba7f88f298}</Project>
+      <Name>Seagate.AAS.EFI.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device.PneumaticControl\Seagate.AAS.Parsel.Device.PneumaticControl.csproj">
+      <Project>{9d60e538-6cd0-439e-98e0-fa490c7e8648}</Project>
+      <Name>Seagate.AAS.Parsel.Device.PneumaticControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Device\Seagate.AAS.Parsel.Device.csproj">
+      <Project>{f4904e90-b0a0-468d-89c7-6d847d638f3d}</Project>
+      <Name>Seagate.AAS.Parsel.Device</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Equipment.HGA\Seagate.AAS.Parsel.Equipment.HGA.csproj">
+      <Project>{e6bae453-14cd-47a0-abfe-1bbb73e783cf}</Project>
+      <Name>Seagate.AAS.Parsel.Equipment.HGA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Equipment\Seagate.AAS.Parsel.Equipment.csproj">
+      <Project>{98fc9df1-2b5e-4c37-a8c5-9303608eb841}</Project>
+      <Name>Seagate.AAS.Parsel.Equipment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Hw.Aerotech.A3200\Seagate.AAS.Parsel.Hw.Aerotech.A3200\Seagate.AAS.Parsel.Hw.Aerotech.A3200.csproj">
+      <Project>{bc7781e2-ef58-45ca-86f3-6c35f3ce4c39}</Project>
+      <Name>Seagate.AAS.Parsel.Hw.Aerotech.A3200</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Hw\Seagate.AAS.Parsel.Hw.csproj">
+      <Project>{c30a28e9-b4a3-443f-90c4-15e86b2e546f}</Project>
+      <Name>Seagate.AAS.Parsel.Hw</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework Parsel HST\Seagate.AAS.Parsel.Security\Seagate.AAS.Security.csproj">
+      <Project>{b35bafbe-b313-4259-a224-96196617395f}</Project>
+      <Name>Seagate.AAS.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework Parsel HST\Seagate.AAS.Utils\Seagate.AAS.Utils.csproj">
+      <Project>{17b26588-ef27-4f05-be71-d7cfefdf2986}</Project>
+      <Name>Seagate.AAS.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LDUMeasurement\LDUMeasurement.csproj">
+      <Project>{ba6c7ec8-caa5-4f94-91ea-72aa73f69884}</Project>
+      <Name>LDUMeasurement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Seagate.AAS.Parsel.Device.SafetyController\Seagate.AAS.Parsel.Device.SafetyController.csproj">
+      <Project>{126C935A-4BFA-44EB-A7B3-31C1EA39F190}</Project>
+      <Name>Seagate.AAS.Parsel.Device.SafetyController</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Seagate.AAS.Parsel.Device.SeaveyorZone\Seagate.AAS.Parsel.Device.SeaveyorZone\Seagate.AAS.Parsel.Device.SeaveyorZone.csproj">
+      <Project>{cfb34424-fa3b-44db-96dc-85e88d59f084}</Project>
+      <Name>Seagate.AAS.Parsel.Device.SeaveyorZone</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Seagate.AAS.Parsel.Device.TurnSection\Seagate.AAS.Parsel.Device.TurnSection.csproj">
+      <Project>{C219B8A2-4269-4E98-8F43-AB5547B4F327}</Project>
+      <Name>Seagate.AAS.Parsel.Device.TurnSection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Seagate.AAS.Parsel\Seagate.AAS.Parsel.csproj">
+      <Project>{9ed3c534-ff29-4379-8020-ea52b59a9363}</Project>
+      <Name>Seagate.AAS.Parsel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Seagate.AAS.UI\Seagate.AAS.UI\Seagate.AAS.UI.csproj">
+      <Project>{e5abc81e-7044-450a-8be7-6415db928271}</Project>
+      <Name>Seagate.AAS.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XyratexOSC\XyratexOSC.csproj">
+      <Project>{c11da827-217a-458a-a446-87b6502b3ad4}</Project>
+      <Name>XyratexOSC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://tep-meapps.ad.seagate.com/me_authen_service/service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SeagateDataBaseLogIn\</RelPath>
+      <UpdateFromURL>http://tep-meapps.ad.seagate.com/me_authen_service/service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HST_meapps_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName)==Release (xcopy $(TargetDir)$(TargetFileName) C:\Seagate\$(TargetName)\Bin\ /F /R /Y /I)
+if $(ConfigurationName)==Release (copy $(TargetDir)*.dll C:\Seagate\$(TargetName)\Bin\)</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

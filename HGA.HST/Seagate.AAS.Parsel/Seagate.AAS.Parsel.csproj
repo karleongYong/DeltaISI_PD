@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9ED3C534-FF29-4379-8020-EA52B59A9363}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Seagate.AAS.Parsel</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Seagate.AAS.Parsel</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\..\..\Frameworks\Framework Parsel HST\Assemblies\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Exceptions\IErrorCodeProvider.cs" />
+    <Compile Include="Exceptions\Utils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exceptions\ParselException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\AppConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\DirectoryLocator\DirectoryListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\DirectoryLocator\DirectoryLocator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\ErrorHandler\ErrorButtons.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\ErrorHandler\ErrorHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\ErrorHandler\ErrorMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\ErrorHandler\FormErrorList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\ErrorHandler\FormPareto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\ErrorHandler\IErrorMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\ErrorHandler\MessageRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\ErrorHandler\PanelErrorMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Services\ErrorHandler\PanelPareto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Services\ErrorHandler\PanelPareto.Designer.cs">
+      <DependentUpon>PanelPareto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\FormLayout.cs" />
+    <Compile Include="Services\IService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\MenuNavigator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\Messaging.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\ServiceManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\Tracing\FormTrace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Tracing\PanelTrace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Services\Tracing\TraceMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\Tracing\Tracing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SR.cs">
+      <DependentUpon>SR.strings</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Test\ServicesTestFixture.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="Documents\Seagate.AAS.Parsel.cd" />
+    <None Include="SR.strings">
+      <Generator>StringResourceTool</Generator>
+      <LastGenOutput>SR.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Services\DirectoryLocator\DirectoryListForm.resx">
+      <DependentUpon>DirectoryListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\ErrorHandler\FormErrorList.resx">
+      <DependentUpon>FormErrorList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\ErrorHandler\FormPareto.resx">
+      <DependentUpon>FormPareto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\ErrorHandler\PanelErrorMessage.resx">
+      <DependentUpon>PanelErrorMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\ErrorHandler\PanelPareto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PanelPareto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Tracing\FormTrace.resx">
+      <DependentUpon>FormTrace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Tracing\PanelTrace.resx">
+      <DependentUpon>PanelTrace.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SR.resx">
+      <DependentUpon>SR.strings</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework Parsel HST\Seagate.AAS.Utils\Seagate.AAS.Utils.csproj">
+      <Project>{17b26588-ef27-4f05-be71-d7cfefdf2986}</Project>
+      <Name>Seagate.AAS.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Seagate.AAS.UI\Seagate.AAS.UI\Seagate.AAS.UI.csproj">
+      <Project>{e5abc81e-7044-450a-8be7-6415db928271}</Project>
+      <Name>Seagate.AAS.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>if $(ConfigurationName)==Release (copy $(TargetPath) $(ProjectDir)..\Assemblies)</PostBuildEvent>
+  </PropertyGroup>
+</Project>

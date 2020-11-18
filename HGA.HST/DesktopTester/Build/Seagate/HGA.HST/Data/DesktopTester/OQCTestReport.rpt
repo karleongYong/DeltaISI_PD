@@ -1,0 +1,31 @@
+                                      OQC Test Report
+
+Test Date: 07/08/2015
+Engineer Name: Gan
+Product Serial Number: ABC
+Product ID: 1
+
+
+                                 RESISTANCE (Ω)                               RESULTS
+              CH1        CH1        CH1        CH1        CH1        CH1
+  0Ω      0.000        0.000        0.000        0.000        0.000        0.000          PASS
+ 10Ω      10.000        10.000        10.000        10.000        10.000        10.000          PASS
+100Ω      100.000        100.000        100.000        100.000        100.000        100.000          PASS
+500Ω      500.000        500.000        500.000        500.000        500.000        500.000          PASS
+ 1kΩ      1000.000        1000.000        1000.000        1000.000        1000.000        1000.000          PASS
+10kΩ      10000.000        10000.000        10000.000        10000.000        10000.000        10000.000          PASS
+
+
+       CAPACITANCE (pF)    RESULTS
+100pF      100             PASS
+270pF      270             PASS
+470pF      470             PASS
+680pF      680             PASS
+820pF      820             PASS
+ 10nF      10000             PASS
+
+
+             TEMPERATURE (°C)    RESULTS
+  CH1 (0°C)                    
+ CH2 (50°C)                    
+CH3 (100°C)                    
