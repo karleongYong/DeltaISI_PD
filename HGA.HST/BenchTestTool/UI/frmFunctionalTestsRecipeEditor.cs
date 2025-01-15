@@ -16,7 +16,7 @@ using BenchTestsTool.Utils;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.InteropServices;
 
-
+//*
 namespace BenchTestsTool.UI
 {
     public partial class frmFunctionalTestsRecipeCOMPortSettingsEditor : Form
